@@ -18,8 +18,8 @@ public class MainPanel extends SuperPanel {
         }
     }
 
-    PurchaseButton addButton(Product product) {
-        PurchaseButton button = new PurchaseButton(product);
+    ProductButton addButton(Product product) {
+        ProductButton button = new ProductButton(product);
         button.setPreferredSize(new Dimension(100, 100));
         button.setBackground(Color.decode("#777777"));
         return button;

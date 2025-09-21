@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class PaymentPanel extends SuperPanel {
 
-    private static JTextArea orderList = new JTextArea(35, 30);
+    private static JTextArea orderTextArea = new JTextArea(30, 25);
     public PaymentPanel() {
 
         this.setLayout(new GridBagLayout());
@@ -14,13 +14,15 @@ public class PaymentPanel extends SuperPanel {
 
         GridBagConstraints gbc = new GridBagConstraints();
 
-        orderList.setBackground(Color.decode("#999999"));
-        orderList.setFont(new Font("Arial", Font.PLAIN, 16));
+        orderTextArea.setBackground(Color.decode("#999999"));
+        orderTextArea.setFont(new Font("Arial", Font.PLAIN, 16));
 
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.weighty = 1.0;
-        this.add(orderList, gbc);
+//        this.add(orderTextArea, gbc);
+        JScrollPane scrollPane = new JScrollPane(orderTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        this.add(scrollPane, gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 1;
@@ -41,7 +43,7 @@ public class PaymentPanel extends SuperPanel {
         return button;
     }
 
-    public JTextArea getOrderList() {
-        return orderList;
+    static public JTextArea getOrderTextArea() {
+        return orderTextArea;
     }
 }
