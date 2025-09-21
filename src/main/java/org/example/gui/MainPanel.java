@@ -1,6 +1,8 @@
 package org.example.gui;
 
 import org.example.Inventory;
+import org.example.Product;
+import org.example.PurchaseButton;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,12 +15,12 @@ public class MainPanel extends SuperPanel {
         this.setPreferredSize(new Dimension(900, 1000));
 
         for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {
-            this.add(addButton(Inventory.inventory[i].getName()));
+            this.add(addButton(Inventory.inventory[i]));
         }
     }
 
-    JButton addButton(String itemName) {
-        JButton button = new JButton(itemName);
+    PurchaseButton addButton(Product product) {
+        PurchaseButton button = new PurchaseButton(product);
         button.setPreferredSize(new Dimension(100, 100));
         button.setBackground(Color.decode("#777777"));
         return button;

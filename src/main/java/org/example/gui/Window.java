@@ -16,7 +16,7 @@ public class Window extends JFrame {
         // the dimensions seem a bit arbitrary but this is like the minimum size required so that
         // the panels don't disappear when window is resized by preventing it from getting resized
         // even smaller
-//        this.setMinimumSize(new Dimension(1302, 1029));
+        this.setMinimumSize(new Dimension(1302, 1029));
 
         MainPanel mainPanel = new MainPanel();
         this.add(mainPanel);
