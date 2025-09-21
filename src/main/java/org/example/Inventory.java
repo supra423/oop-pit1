@@ -11,7 +11,7 @@ public class Inventory {
     final static private Product product8 = new Product("Product8", 800.0);
     final static private Product product9 = new Product("Product9", 900.0);
 
-    static private Product[] inventory = {
+    static private final Product[] inventory = {
             product1, product2, product3,
             product4, product5, product6,
             product7, product8, product9
