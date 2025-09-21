@@ -1,7 +1,6 @@
 package org.example;
 
 public class Inventory {
-
     final static private Product product1 = new Product("Product1", 100.0);
     final static private Product product2 = new Product("Product2", 200.0);
     final static private Product product3 = new Product("Product3", 300.0);
