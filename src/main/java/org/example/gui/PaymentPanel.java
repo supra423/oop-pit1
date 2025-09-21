@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PaymentPanel extends SuperPanel {
+
+    private static JTextArea orderList = new JTextArea(35, 30);
     public PaymentPanel() {
 
         this.setLayout(new GridBagLayout());
@@ -12,7 +14,6 @@ public class PaymentPanel extends SuperPanel {
 
         GridBagConstraints gbc = new GridBagConstraints();
 
-        JTextArea orderList = new JTextArea(35, 30);
         orderList.setBackground(Color.decode("#999999"));
         orderList.setFont(new Font("Arial", Font.PLAIN, 16));
 
@@ -38,5 +39,9 @@ public class PaymentPanel extends SuperPanel {
         button.setPreferredSize(new Dimension(300, 100));
         button.setBackground(Color.decode("#777777"));
         return button;
+    }
+
+    public JTextArea getOrderList() {
+        return orderList;
     }
 }

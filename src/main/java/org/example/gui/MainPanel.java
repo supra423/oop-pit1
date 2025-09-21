@@ -2,20 +2,19 @@ package org.example.gui;
 
 import org.example.Inventory;
 import org.example.Product;
-import org.example.PurchaseButton;
 
-import javax.swing.*;
 import java.awt.*;
 
 public class MainPanel extends SuperPanel {
     private static final int NUMBER_OF_BUTTONS = 9;
+    private static final Inventory inventory = new Inventory();
     public MainPanel() {
         this.setLayout(new GridLayout(3, 3));
         this.setBackground(Color.decode("#333333"));
         this.setPreferredSize(new Dimension(900, 1000));
 
         for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {
-            this.add(addButton(Inventory.inventory[i]));
+            this.add(addButton(inventory.getInventory()[i]));
         }
     }
 

@@ -2,19 +2,23 @@ package org.example;
 
 public class Inventory {
 
-    static Product product1 = new Product("Item1", 100.0);
-    static Product product2 = new Product("Item2", 200.0);
-    static Product product3 = new Product("Item3", 300.0);
-    static Product product4 = new Product("Item4", 400.0);
-    static Product product5 = new Product("Item5", 500.0);
-    static Product product6 = new Product("Item6", 600.0);
-    static Product product7 = new Product("Item7", 700.0);
-    static Product product8 = new Product("Item8", 800.0);
-    static Product product9 = new Product("Item9", 900.0);
+    final static private Product product1 = new Product("Product1", 100.0);
+    final static private Product product2 = new Product("Product2", 200.0);
+    final static private Product product3 = new Product("Product3", 300.0);
+    final static private Product product4 = new Product("Product4", 400.0);
+    final static private Product product5 = new Product("Product5", 500.0);
+    final static private Product product6 = new Product("Product6", 600.0);
+    final static private Product product7 = new Product("Product7", 700.0);
+    final static private Product product8 = new Product("Product8", 800.0);
+    final static private Product product9 = new Product("Product9", 900.0);
 
-    static public Product[] inventory = {
+    static private Product[] inventory = {
             product1, product2, product3,
             product4, product5, product6,
             product7, product8, product9
     };
+
+    public Product[] getInventory() {
+        return inventory;
+    }
 }

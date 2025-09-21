@@ -1,13 +1,14 @@
 package org.example;
 
 public class Product {
-    String name;
-    double price;
-    Product() {
+    private String name;
+    private double price;
+
+    public Product() {
         this.name = "Unknown Product";
         this.price = 1.0;
     }
-    Product(String name, double Price) {
+    public Product(String name, double Price) {
         this.name = name;
         this.price = price;
     }
