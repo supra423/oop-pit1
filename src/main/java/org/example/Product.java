@@ -1,22 +1,7 @@
 package org.example;
 
-public class Product {
-    private final String name;
-    private final double price;
-
+public record Product(String name, double price) {
     public Product() {
-        this.name = "Unknown Product";
-        this.price = 1.0;
-    }
-    public Product(String name, double price) {
-        this.name = name;
-        this.price = price;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public double getPrice() {
-        return price;
+        this("Unknown Product", 1.0);
     }
 }
