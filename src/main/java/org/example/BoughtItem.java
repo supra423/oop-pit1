@@ -1,7 +1,7 @@
 package org.example;
 
 public class BoughtItem {
-    private Product product;
+    private final Product product;
     private int quantity;
     public BoughtItem(Product product) {
         this.product = product;
