@@ -13,7 +13,7 @@ public class ProductButton extends JButton {
         this.addActionListener(new ProductButtonHandler(product));
     }
     public ProductButton(Product product) {
-        this.setText(product.getName());
+        this.setText("<html><font size='16'>" + product.getName() + "<br>" + product.getPrice() + "</html>");
         this.product = product;
         this.addActionListener(new ProductButtonHandler(product));
     }

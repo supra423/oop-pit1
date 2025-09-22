@@ -1,8 +1,10 @@
 package org.example.gui;
 
+import org.example.BoughtItem;
 import org.example.Inventory;
 import org.example.Product;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class MainPanel extends SuperPanel {
