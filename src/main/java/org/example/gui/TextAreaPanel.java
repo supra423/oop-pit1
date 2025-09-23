@@ -3,10 +3,10 @@ package org.example.gui;
 import javax.swing.*;
 import java.awt.*;
 
-public class PaymentPanel extends SuperPanel {
+public class TextAreaPanel extends SuperPanel {
 
     private static JTextArea orderTextArea = new JTextArea(30, 25);
-    public PaymentPanel() {
+    public TextAreaPanel() {
 
         this.setLayout(new GridBagLayout());
         this.setBackground(Color.decode("#888888"));
@@ -20,7 +20,6 @@ public class PaymentPanel extends SuperPanel {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.weighty = 1.0;
-//        this.add(orderTextArea, gbc);
         JScrollPane scrollPane = new JScrollPane(orderTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         this.add(scrollPane, gbc);
 

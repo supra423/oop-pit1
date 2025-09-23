@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class ProductButton extends JButton {
     public ProductButton(Product product) {
-        this.setText("<html><font size='16'>" + product.name() + "<br>" + product.price() + "</html>");
+        this.setText("<html><font size='16'>" + product.name() + "<br>Php" + product.price() + "</html>");
         this.addActionListener(new ProductButtonHandler(product));
     }
 }
