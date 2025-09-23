@@ -1,25 +1,28 @@
 package org.example.gui;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class MainPanel extends SuperPanel {
     public MainPanel() {
-        this.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
+        this.setLayout(new BorderLayout());
 
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        TextAreaPanel paymentPanel = new TextAreaPanel();
-        this.add(paymentPanel, gbc);
+        LogoPanel logoPanel = new LogoPanel();
+        this.add(logoPanel, BorderLayout.NORTH);
 
-        gbc.gridx = 1;
-        gbc.gridy = 0;
+        JPanel middlePanel = new JPanel();
+        middlePanel.setLayout(new BorderLayout());
+
+        TextAreaPanel textAreaPanel = new TextAreaPanel();
+        middlePanel.add(textAreaPanel, BorderLayout.WEST);
+
         ProductPanel productPanel = new ProductPanel();
-        this.add(productPanel, gbc);
+        middlePanel.add(productPanel, BorderLayout.EAST);
 
-        gbc.gridx = 0;
-        gbc.gridy = 1;
+        this.add(middlePanel, BorderLayout.CENTER);
+
         BottomPanel bottomPanel = new BottomPanel();
-        this.add(bottomPanel, gbc);
+
+        this.add(bottomPanel, BorderLayout.SOUTH);
     }
 }
