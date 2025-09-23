@@ -11,7 +11,7 @@ public class ProductPanel extends SuperPanel {
     public ProductPanel() {
         this.setLayout(new GridLayout(3, 3));
         this.setBackground(Color.decode("#333333"));
-        this.setPreferredSize(new Dimension(900, 1000));
+        this.setPreferredSize(new Dimension(900, 700));
 
         for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {
             this.add(addButton(inventory.getInventory()[i]));

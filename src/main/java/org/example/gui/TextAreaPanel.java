@@ -5,12 +5,12 @@ import java.awt.*;
 
 public class TextAreaPanel extends SuperPanel {
 
-    private static JTextArea orderTextArea = new JTextArea(30, 25);
+    private static JTextArea orderTextArea = new JTextArea(36, 29);
     public TextAreaPanel() {
 
         this.setLayout(new GridBagLayout());
         this.setBackground(Color.decode("#888888"));
-        this.setPreferredSize(new Dimension(400, 1000));
+        this.setPreferredSize(new Dimension(400, 700));
 
         GridBagConstraints gbc = new GridBagConstraints();
 
@@ -20,18 +20,8 @@ public class TextAreaPanel extends SuperPanel {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.weighty = 1.0;
-        JScrollPane scrollPane = new JScrollPane(orderTextArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        JScrollPane scrollPane = new JScrollPane(orderTextArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         this.add(scrollPane, gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        this.add(addButton(), gbc);
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        this.add(addButton(), gbc);
-        gbc.gridx = 0;
-        gbc.gridy = 3;
-        this.add(addButton(), gbc);
     }
 
     @Override
