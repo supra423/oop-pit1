@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.gui.PaymentPanel;
+import org.example.gui.TextAreaPanel;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -20,9 +20,9 @@ public record ProductButtonHandler(Product product) implements ActionListener {
                     Order.appendOrders(boughtItem);
                     double priceTimesQuantity = (boughtItem.getProduct().price() * boughtItem.getQuantity());
                     String messageAppend1 = String.format(
-                            "%s x %d ----- %.2f\n", boughtItem.getProduct().name(), boughtItem.getQuantity(), priceTimesQuantity
+                            "%s x %d ----- Php%.2f\n", boughtItem.getProduct().name(), boughtItem.getQuantity(), priceTimesQuantity
                     );
-                    PaymentPanel.getOrderTextArea().append(messageAppend1);
+                    TextAreaPanel.getOrderTextArea().append(messageAppend1);
                     break;
                 }
             } catch (NumberFormatException e) {

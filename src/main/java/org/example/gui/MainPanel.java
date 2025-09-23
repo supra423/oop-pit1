@@ -1,29 +1,25 @@
 package org.example.gui;
 
-import org.example.BoughtItem;
-import org.example.Inventory;
-import org.example.Product;
-
-import javax.swing.*;
 import java.awt.*;
 
 public class MainPanel extends SuperPanel {
-    private static final int NUMBER_OF_BUTTONS = 9;
-    private static final Inventory inventory = new Inventory();
     public MainPanel() {
-        this.setLayout(new GridLayout(3, 3));
-        this.setBackground(Color.decode("#333333"));
-        this.setPreferredSize(new Dimension(900, 1000));
+        this.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
 
-        for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {
-            this.add(addButton(inventory.getInventory()[i]));
-        }
-    }
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        TextAreaPanel paymentPanel = new TextAreaPanel();
+        this.add(paymentPanel, gbc);
 
-    ProductButton addButton(Product product) {
-        ProductButton button = new ProductButton(product);
-        button.setPreferredSize(new Dimension(100, 100));
-        button.setBackground(Color.decode("#777777"));
-        return button;
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        ProductPanel productPanel = new ProductPanel();
+        this.add(productPanel, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        BottomPanel bottomPanel = new BottomPanel();
+        this.add(bottomPanel, gbc);
     }
 }

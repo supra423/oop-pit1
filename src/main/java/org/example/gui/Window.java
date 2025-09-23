@@ -19,10 +19,9 @@ public class Window extends JFrame {
         this.setMinimumSize(new Dimension(1302, 1029));
 
         MainPanel mainPanel = new MainPanel();
+
         this.add(mainPanel);
 
-        PaymentPanel paymentPanel = new PaymentPanel();
-        this.add(paymentPanel);
         this.pack();
     }
 }
