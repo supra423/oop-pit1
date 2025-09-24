@@ -26,7 +26,6 @@ public class TextAreaPanel extends SuperPanel {
         this.add(scrollPane, gbc);
     }
 
-    @Override
     JButton addButton() {
         JButton button = new JButton("Click Button");
         button.setPreferredSize(new Dimension(300, 100));
