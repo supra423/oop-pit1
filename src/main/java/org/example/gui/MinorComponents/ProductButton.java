@@ -1,4 +1,4 @@
-package org.example.gui;
+package org.example.gui.MinorComponents;
 
 import org.example.ProductButtonHandler;
 import org.example.Product;

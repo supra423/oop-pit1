@@ -1,7 +1,9 @@
-package org.example.gui;
+package org.example.gui.MainPanel.MiddlePanel;
 
 import org.example.Inventory;
 import org.example.Product;
+import org.example.gui.MinorComponents.ProductButton;
+import org.example.gui.SuperPanel;
 
 import java.awt.*;
 

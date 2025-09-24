@@ -1,5 +1,7 @@
 package org.example.gui;
 
+import org.example.gui.MainPanel.MainPanel;
+
 import javax.swing.*;
 import java.awt.*;
 
