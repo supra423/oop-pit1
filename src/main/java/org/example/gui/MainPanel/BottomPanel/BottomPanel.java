@@ -9,10 +9,10 @@ public class BottomPanel extends SuperPanel {
         this.setPreferredSize(new Dimension(1300, 200));
         this.setLayout(new GridLayout());
 
-        FieldPanel fieldPanel = new FieldPanel();
+        CashFieldPanel cashFieldPanel = new CashFieldPanel();
         ButtonPanel buttonPanel = new ButtonPanel();
 
-        this.add(fieldPanel);
+        this.add(cashFieldPanel);
         this.add(buttonPanel);
     }
 }
