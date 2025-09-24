@@ -1,6 +1,10 @@
-package org.example.gui;
+package org.example.gui.MainPanel;
 
-import javax.swing.*;
+import org.example.gui.MainPanel.BottomPanel.BottomPanel;
+import org.example.gui.MainPanel.LogoPanel.LogoPanel;
+import org.example.gui.MainPanel.MiddlePanel.MiddlePanel;
+import org.example.gui.SuperPanel;
+
 import java.awt.*;
 
 public class MainPanel extends SuperPanel {
@@ -10,19 +14,10 @@ public class MainPanel extends SuperPanel {
         LogoPanel logoPanel = new LogoPanel();
         this.add(logoPanel, BorderLayout.NORTH);
 
-        JPanel middlePanel = new JPanel();
-        middlePanel.setLayout(new BorderLayout());
-
-        TextAreaPanel textAreaPanel = new TextAreaPanel();
-        middlePanel.add(textAreaPanel, BorderLayout.WEST);
-
-        ProductPanel productPanel = new ProductPanel();
-        middlePanel.add(productPanel, BorderLayout.EAST);
-
+        MiddlePanel middlePanel = new MiddlePanel();
         this.add(middlePanel, BorderLayout.CENTER);
 
         BottomPanel bottomPanel = new BottomPanel();
-
         this.add(bottomPanel, BorderLayout.SOUTH);
     }
 }

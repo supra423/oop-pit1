@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.gui.TextAreaPanel;
+import org.example.gui.MainPanel.MiddlePanel.TextAreaPanel;
 
 import javax.swing.*;
 import java.awt.event.*;
