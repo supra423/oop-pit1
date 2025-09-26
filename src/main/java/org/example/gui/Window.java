@@ -10,7 +10,7 @@ public class Window extends JFrame {
         this.setTitle("Smart Phone Store");
         this.setLayout(new GridBagLayout());
 
-        this.getContentPane().setBackground(Color.decode("#555555"));
+        this.getContentPane().setBackground(Color.WHITE);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(true);
