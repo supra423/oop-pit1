@@ -3,11 +3,11 @@ package org.example.gui.MainPanel.MiddlePanel;
 import org.example.Inventory;
 import org.example.Product;
 import org.example.gui.MinorComponents.ProductButton;
-import org.example.gui.SuperPanel;
 
+import javax.swing.*;
 import java.awt.*;
 
-public class ProductPanel extends SuperPanel {
+public class ProductPanel extends JPanel {
     private static final int NUMBER_OF_BUTTONS = 9;
     private static final Inventory inventory = new Inventory();
     public ProductPanel() {

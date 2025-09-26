@@ -1,11 +1,9 @@
 package org.example.gui.MainPanel.BottomPanel;
 
-import org.example.gui.SuperPanel;
-
 import javax.swing.*;
 import java.awt.*;
 
-public class ButtonPanel extends SuperPanel {
+public class ButtonPanel extends JPanel {
     public ButtonPanel() {
         this.setLayout(new GridLayout());
         JPanel panel1 = new JPanel(new GridBagLayout());
