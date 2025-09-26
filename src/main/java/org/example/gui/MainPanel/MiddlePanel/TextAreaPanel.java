@@ -10,8 +10,9 @@ public class TextAreaPanel extends JPanel {
         this.setBackground(Color.decode("#888888"));
         this.setPreferredSize(new Dimension(400, 700));
 
-        orderTextArea.setBackground(Color.decode("#999999"));
-        orderTextArea.setFont(new Font("Arial", Font.PLAIN, 16));
+        orderTextArea.setBackground(Color.decode("#5A81A1"));
+        orderTextArea.setFont(new Font("Arial", Font.BOLD, 18));
+        orderTextArea.setForeground(Color.WHITE);
 
         JScrollPane scrollPane = new JScrollPane(orderTextArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         this.add(scrollPane);

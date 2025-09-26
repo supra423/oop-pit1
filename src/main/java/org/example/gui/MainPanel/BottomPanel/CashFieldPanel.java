@@ -12,16 +12,19 @@ public class CashFieldPanel extends JPanel {
     public static JLabel changeLabel = new JLabel("<html>Change:<br>Php00.00</html>");
     public CashFieldPanel() {
         this.setLayout(new GridLayout());
+        this.setBackground(Color.decode("#9EC3DD"));
         JPanel panel1 = new JPanel(new GridBagLayout());
+        panel1.setBackground(Color.decode("#9EC3DD"));
 
         JPanel totalPanel = new JPanel(new GridBagLayout());
         totalLabel.setFont(new Font("Arial", Font.BOLD, 32));
-        totalPanel.setBackground(Color.decode("#aaaaaa"));
+        totalPanel.setBackground(Color.decode("#E8F6FF"));
         totalPanel.setPreferredSize(new Dimension(300, 180));
         totalPanel.add(totalLabel);
         panel1.add(totalPanel);
 
         JPanel panel2 = new JPanel(new GridBagLayout());
+        panel2.setBackground(Color.decode("#9EC3DD"));
 
         GridBagConstraints gbc = new GridBagConstraints();
 
@@ -33,7 +36,7 @@ public class CashFieldPanel extends JPanel {
         cashLabel.setFont(new Font("Arial", Font.BOLD, 32));
         cashTextField.setFont(new Font("Arial", Font.BOLD, 32));
         phpLabel.setFont(new Font("Arial", Font.BOLD, 32));
-        cashPanel.setBackground(Color.decode("#aaaaaa"));
+        cashPanel.setBackground(Color.decode("#E8F6FF"));
         cashPanel.setPreferredSize(new Dimension(300, 85));
 
         gbc.gridy = 0;
@@ -46,7 +49,7 @@ public class CashFieldPanel extends JPanel {
         cashPanel.add(cashTextField, gbc);
 
         JPanel changePanel = new JPanel();
-        changePanel.setBackground(Color.decode("#aaaaaa"));
+        changePanel.setBackground(Color.decode("#E8F6FF"));
         changePanel.setPreferredSize(new Dimension(300, 85));
         changeLabel.setFont(new Font("Arial", Font.BOLD, 32));
         changePanel.add(changeLabel);

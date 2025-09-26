@@ -6,6 +6,7 @@ import java.awt.*;
 public class MiddlePanel extends JPanel {
     public MiddlePanel() {
         this.setLayout(new BorderLayout());
+        this.setBackground(Color.decode("#9EC3DD"));
 
         TextAreaPanel textAreaPanel = new TextAreaPanel();
         this.add(textAreaPanel, BorderLayout.WEST);
