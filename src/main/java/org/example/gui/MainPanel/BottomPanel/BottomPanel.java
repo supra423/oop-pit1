@@ -1,10 +1,9 @@
 package org.example.gui.MainPanel.BottomPanel;
 
-import org.example.gui.SuperPanel;
-
+import javax.swing.*;
 import java.awt.*;
 
-public class BottomPanel extends SuperPanel {
+public class BottomPanel extends JPanel {
     public BottomPanel() {
         this.setPreferredSize(new Dimension(1300, 200));
         this.setLayout(new GridLayout());

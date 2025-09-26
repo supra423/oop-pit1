@@ -1,10 +1,9 @@
 package org.example.gui.MainPanel.MiddlePanel;
 
-import org.example.gui.SuperPanel;
-
+import javax.swing.*;
 import java.awt.*;
 
-public class MiddlePanel extends SuperPanel {
+public class MiddlePanel extends JPanel {
     public MiddlePanel() {
         this.setLayout(new BorderLayout());
 

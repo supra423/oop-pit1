@@ -1,11 +1,9 @@
 package org.example.gui.MainPanel.MiddlePanel;
 
-import org.example.gui.SuperPanel;
-
 import javax.swing.*;
 import java.awt.*;
 
-public class TextAreaPanel extends SuperPanel {
+public class TextAreaPanel extends JPanel {
     private static final JTextArea orderTextArea = new JTextArea(36, 29);
     public TextAreaPanel() {
         this.setLayout(new GridLayout());
