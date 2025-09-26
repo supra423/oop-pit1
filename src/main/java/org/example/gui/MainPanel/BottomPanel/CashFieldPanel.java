@@ -26,7 +26,7 @@ public class CashFieldPanel extends JPanel {
         GridBagConstraints gbc = new GridBagConstraints();
 
         JPanel cashPanel = new JPanel(new GridBagLayout());
-        JLabel cashLabel = new JLabel("CASH:");
+        JLabel cashLabel = new JLabel("Cash:");
         JLabel phpLabel = new JLabel("Php");
 
         JTextField cashTextField = new JTextField(6);

@@ -11,12 +11,37 @@ public class ButtonPanel extends JPanel {
 
         JButton nextCustomerButton = new JButton();
         JButton salesInventoryButton = new JButton();
-
-        nextCustomerButton.setPreferredSize(new Dimension(130, 170));
-        salesInventoryButton.setPreferredSize(new Dimension(130, 170));
+        nextCustomerButton.setLayout(new GridBagLayout());
+        salesInventoryButton.setLayout(new GridBagLayout());
 
         GridBagConstraints gbc = new GridBagConstraints();
 
+        JLabel nextCustomerLabel1 = new JLabel("NEXT");
+        JLabel nextCustomerLabel2 = new JLabel("CUSTOMER");
+
+        JLabel salesInventoryLabel1 = new JLabel("SALES");
+        JLabel salesInventoryLabel2 = new JLabel("INVENTORY");
+
+
+        salesInventoryLabel1.setFont(new Font("Arial", Font.BOLD, 20));
+        salesInventoryLabel2.setFont(new Font("Arial", Font.BOLD, 20));
+
+        nextCustomerLabel1.setFont(new Font("Arial", Font.BOLD, 20));
+        nextCustomerLabel2.setFont(new Font("Arial", Font.BOLD, 20));
+
+        gbc.gridy = 0;
+        nextCustomerButton.add(nextCustomerLabel1, gbc);
+        gbc.gridy = 1;
+        nextCustomerButton.add(nextCustomerLabel2, gbc);
+        nextCustomerButton.setPreferredSize(new Dimension(130, 170));
+
+        gbc.gridy = 0;
+        salesInventoryButton.add(salesInventoryLabel1, gbc);
+        gbc.gridy = 1;
+        salesInventoryButton.add(salesInventoryLabel2, gbc);
+        salesInventoryButton.setPreferredSize(new Dimension(130, 170));
+
+        gbc.gridy = 0;
         gbc.insets = new Insets(10, 10, 10, 11);
         panel1.add(nextCustomerButton, gbc);
 
@@ -24,6 +49,17 @@ public class ButtonPanel extends JPanel {
 
         JButton confirmButton = new JButton();
         JButton cancelButton = new JButton();
+        confirmButton.setLayout(new GridBagLayout());
+        cancelButton.setLayout(new GridBagLayout());
+
+        JLabel confirmButtonLabel = new JLabel("CONFIRM");
+        JLabel cancelButtonLabel = new JLabel("CANCEL");
+
+        confirmButtonLabel.setFont(new Font("Arial", Font.BOLD, 40));
+        cancelButtonLabel.setFont(new Font("Arial", Font.BOLD, 40));
+
+        confirmButton.add(confirmButtonLabel);
+        cancelButton.add(cancelButtonLabel);
 
         confirmButton.setPreferredSize(new Dimension(300, 80));
         cancelButton.setPreferredSize(new Dimension(300, 80));
