@@ -1,5 +1,8 @@
-package org.example;
+package org.example.ButtonHandlers;
 
+import org.example.BoughtItem;
+import org.example.Order;
+import org.example.Product;
 import org.example.gui.MainPanel.MiddlePanel.TextAreaPanel;
 
 import javax.swing.*;

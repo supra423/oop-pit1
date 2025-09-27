@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Order {
     private static final ArrayList<BoughtItem> orders = new ArrayList<>();
-//    private static double totalCost;
 
     public static ArrayList<BoughtItem> getOrders() {
         return orders;
@@ -18,5 +17,8 @@ public class Order {
             totalCost += boughtItem.getQuantity() * boughtItem.getProduct().price();
         }
         return totalCost;
+    }
+    public static void resetOrders() {
+        orders.clear();
     }
 }

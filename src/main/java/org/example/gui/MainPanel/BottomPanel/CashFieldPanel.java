@@ -1,15 +1,12 @@
 package org.example.gui.MainPanel.BottomPanel;
 
-import org.example.BoughtItem;
-import org.example.Order;
-
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class CashFieldPanel extends JPanel {
     public static JLabel totalLabel = new JLabel("<html>Total:<br>Php00.00</html>");
     public static JLabel changeLabel = new JLabel("<html>Change:<br>Php00.00</html>");
+    public static JTextField cashTextField = new JTextField(6);
     public CashFieldPanel() {
         this.setLayout(new GridLayout());
         this.setBackground(Color.decode("#9EC3DD"));
@@ -32,7 +29,6 @@ public class CashFieldPanel extends JPanel {
         JLabel cashLabel = new JLabel("Cash:");
         JLabel phpLabel = new JLabel("Php");
 
-        JTextField cashTextField = new JTextField(6);
         cashLabel.setFont(new Font("Arial", Font.BOLD, 32));
         cashTextField.setFont(new Font("Arial", Font.BOLD, 32));
         phpLabel.setFont(new Font("Arial", Font.BOLD, 32));

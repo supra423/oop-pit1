@@ -1,7 +1,7 @@
 package org.example.gui.MainPanel.MiddlePanel;
 
 import org.example.Inventory;
-import org.example.gui.MinorComponents.ProductButton;
+import org.example.ButtonHandlers.ProductButtonHandler;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +19,10 @@ public class ProductPanel extends JPanel {
 
         for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {
             GridBagConstraints gbc = new GridBagConstraints();
-            ProductButton button = new ProductButton(inventory.getInventory()[i]);
+            JButton button = new JButton();
+            ProductButtonHandler productButtonHandler = new ProductButtonHandler(inventory.getInventory()[i]);
+            button.setLayout(new GridBagLayout());
+            button.addActionListener(productButtonHandler);
             JLabel image = new JLabel(inventory.getInventory()[i].icon());
             JLabel productInfo = new JLabel(String.format("<html>%s<br>Price: Php%.2f</html>",
                     inventory.getInventory()[i].name(),

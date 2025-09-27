@@ -1,5 +1,8 @@
 package org.example.gui.MainPanel.BottomPanel;
 
+import org.example.ButtonHandlers.ConfirmButtonHandler;
+import org.example.ButtonHandlers.NextCustomerButtonHandler;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,6 +17,8 @@ public class ButtonPanel extends JPanel {
 
         JButton nextCustomerButton = new JButton();
         JButton salesInventoryButton = new JButton();
+        NextCustomerButtonHandler nextCustomerButtonHandler = new NextCustomerButtonHandler();
+        nextCustomerButton.addActionListener(nextCustomerButtonHandler);
         nextCustomerButton.setBackground(Color.decode("#7E5303"));
         salesInventoryButton.setBackground(Color.decode("#5A0B88"));
         nextCustomerButton.setLayout(new GridBagLayout());
@@ -58,6 +63,8 @@ public class ButtonPanel extends JPanel {
         JButton confirmButton = new JButton();
         JButton cancelButton = new JButton();
         confirmButton.setLayout(new GridBagLayout());
+        ConfirmButtonHandler confirmButtonHandler = new ConfirmButtonHandler();
+        confirmButton.addActionListener(confirmButtonHandler);
         cancelButton.setLayout(new GridBagLayout());
         confirmButton.setBackground(Color.decode("#0D9316"));
         cancelButton.setBackground(Color.decode("#DE3314"));
