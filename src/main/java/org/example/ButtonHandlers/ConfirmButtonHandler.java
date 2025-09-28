@@ -1,5 +1,7 @@
 package org.example.ButtonHandlers;
 import org.example.Order;
+import org.example.gui.MainPanel.MiddlePanel.ProductPanel;
+import org.example.gui.MainPanel.MiddlePanel.ProductPanel.*;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -18,6 +20,10 @@ public class ConfirmButtonHandler implements ActionListener {
             JOptionPane.showMessageDialog(null, "Insufficient cash!");
         } else {
             changeLabel.setText(String.format("<html>Change:<br>Php%.2f</html>", change));
+            for (JButton button : ProductPanel.getButtons()) {
+                button.setEnabled(false);
+            }
         }
+
     }
 }

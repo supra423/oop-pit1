@@ -1,22 +1,16 @@
 package org.example.ButtonHandlers;
 
-import org.example.BoughtItem;
 import org.example.Order;
-import org.example.SalesInventory;
 import org.example.gui.MainPanel.BottomPanel.CashFieldPanel;
-import org.example.gui.MainPanel.MiddlePanel.*;
+import org.example.gui.MainPanel.MiddlePanel.ProductPanel;
+import org.example.gui.MainPanel.MiddlePanel.TextAreaPanel;
 
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class NextCustomerButtonHandler implements ActionListener {
+public class CancelButtonHandler implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
-        if (!TextAreaPanel.getOrderTextArea().getText().isEmpty()) {
-            for (BoughtItem boughtItem : Order.getOrders()) {
-                SalesInventory.appendSalesInventory(boughtItem);
-            }
-        }
-
         Order.resetOrders();
         CashFieldPanel.totalLabel.setText("<html>Total:<br>Php00.00</html>");
         CashFieldPanel.changeLabel.setText("<html>Change:<br>Php00.00</html>");
