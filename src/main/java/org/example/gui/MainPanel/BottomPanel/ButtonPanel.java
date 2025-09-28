@@ -1,7 +1,10 @@
 package org.example.gui.MainPanel.BottomPanel;
 
+import org.example.ButtonHandlers.CancelButtonHandler;
 import org.example.ButtonHandlers.ConfirmButtonHandler;
 import org.example.ButtonHandlers.NextCustomerButtonHandler;
+import org.example.ButtonHandlers.SalesInventoryButtonHandler;
+import org.example.SalesInventory;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +21,9 @@ public class ButtonPanel extends JPanel {
         JButton nextCustomerButton = new JButton();
         JButton salesInventoryButton = new JButton();
         NextCustomerButtonHandler nextCustomerButtonHandler = new NextCustomerButtonHandler();
+        SalesInventoryButtonHandler salesInventoryButtonHandler = new SalesInventoryButtonHandler();
         nextCustomerButton.addActionListener(nextCustomerButtonHandler);
+        salesInventoryButton.addActionListener(salesInventoryButtonHandler);
         nextCustomerButton.setBackground(Color.decode("#7E5303"));
         salesInventoryButton.setBackground(Color.decode("#5A0B88"));
         nextCustomerButton.setLayout(new GridBagLayout());
@@ -64,6 +69,8 @@ public class ButtonPanel extends JPanel {
         JButton cancelButton = new JButton();
         confirmButton.setLayout(new GridBagLayout());
         ConfirmButtonHandler confirmButtonHandler = new ConfirmButtonHandler();
+        CancelButtonHandler cancelButtonHandler = new CancelButtonHandler();
+        cancelButton.addActionListener(cancelButtonHandler);
         confirmButton.addActionListener(confirmButtonHandler);
         cancelButton.setLayout(new GridBagLayout());
         confirmButton.setBackground(Color.decode("#0D9316"));
