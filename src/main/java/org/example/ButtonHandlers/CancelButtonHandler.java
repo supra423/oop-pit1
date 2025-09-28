@@ -12,9 +12,9 @@ import java.awt.event.ActionListener;
 public class CancelButtonHandler implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         Order.resetOrders();
-        CashFieldPanel.totalLabel.setText("<html>Total:<br>Php00.00</html>");
-        CashFieldPanel.changeLabel.setText("<html>Change:<br>Php00.00</html>");
-        CashFieldPanel.cashTextField.setText("");
+        CashFieldPanel.getTotalLabel().setText("<html>Total:<br>Php00.00</html>");
+        CashFieldPanel.getChangeLabel().setText("<html>Change:<br>Php00.00</html>");
+        CashFieldPanel.getCashTextField().setText("");
         TextAreaPanel.getOrderTextArea().setText("");
         for (JButton button : ProductPanel.getButtons()) {
             button.setEnabled(true);

@@ -21,6 +21,6 @@ public class SalesInventoryButtonHandler implements ActionListener {
             grandTotal += (boughtItem.getQuantity() * boughtItem.getProduct().price());
         }
         String message = stringBuilder.toString();
-        JOptionPane.showMessageDialog(null, message + "\n\nGrand Total: " + grandTotal);
+        JOptionPane.showMessageDialog(null, String.format("%s\n\nGrand Total: %.2f", message, grandTotal));
     }
 }
