@@ -3,12 +3,11 @@ package org.example.ButtonHandlers;
 import org.example.BoughtItem;
 import org.example.Order;
 import org.example.Product;
+import org.example.gui.MainPanel.BottomPanel.CashFieldPanel;
 import org.example.gui.MainPanel.MiddlePanel.TextAreaPanel;
 
 import javax.swing.*;
 import java.awt.event.*;
-
-import static org.example.gui.MainPanel.BottomPanel.CashFieldPanel.totalLabel;
 
 public record ProductButtonHandler(Product product) implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
@@ -28,7 +27,7 @@ public record ProductButtonHandler(Product product) implements ActionListener {
                             "%s x %d ----- Php%.2f\n", boughtItem.getProduct().name(), boughtItem.getQuantity(), priceTimesQuantity
                     );
                     TextAreaPanel.getOrderTextArea().append(messageAppend1);
-                    totalLabel.setText(String.format("<html><font size='10'>Total:<br>Php%.2f</html>", Order.calculateTotal()));
+                    CashFieldPanel.getTotalLabel().setText(String.format("<html>Total:<br>Php%.2f</html>", Order.calculateTotal()));
                     break;
                 }
             } catch (NumberFormatException e) {

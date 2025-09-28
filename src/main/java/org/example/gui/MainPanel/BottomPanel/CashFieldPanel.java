@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class CashFieldPanel extends JPanel {
-    public static JLabel totalLabel = new JLabel("<html>Total:<br>Php00.00</html>");
-    public static JLabel changeLabel = new JLabel("<html>Change:<br>Php00.00</html>");
-    public static JTextField cashTextField = new JTextField(6);
+    private static JLabel totalLabel = new JLabel("<html>Total:<br>Php00.00</html>");
+    private static JLabel changeLabel = new JLabel("<html>Change:<br>Php00.00</html>");
+    private static JTextField cashTextField = new JTextField(6);
     public CashFieldPanel() {
         this.setLayout(new GridLayout());
         this.setBackground(Color.decode("#9EC3DD"));
@@ -58,5 +58,14 @@ public class CashFieldPanel extends JPanel {
 
         this.add(panel1);
         this.add(panel2);
+    }
+    public static JLabel getTotalLabel() {
+        return totalLabel;
+    }
+    public static JLabel getChangeLabel() {
+        return changeLabel;
+    }
+    public static JTextField getCashTextField() {
+        return cashTextField;
     }
 }

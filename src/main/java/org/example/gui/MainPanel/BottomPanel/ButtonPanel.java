@@ -4,12 +4,12 @@ import org.example.ButtonHandlers.CancelButtonHandler;
 import org.example.ButtonHandlers.ConfirmButtonHandler;
 import org.example.ButtonHandlers.NextCustomerButtonHandler;
 import org.example.ButtonHandlers.SalesInventoryButtonHandler;
-import org.example.SalesInventory;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class ButtonPanel extends JPanel {
+    public static boolean canClickNextCustomerButton = false;
     public ButtonPanel() {
         this.setLayout(new GridLayout());
         this.setBackground(Color.decode("#9EC3DD"));
