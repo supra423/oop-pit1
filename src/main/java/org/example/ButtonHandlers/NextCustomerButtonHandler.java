@@ -12,7 +12,7 @@ import java.awt.event.*;
 
 public class NextCustomerButtonHandler implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
-        if (!TextAreaPanel.getOrderTextArea().getText().isEmpty() && ButtonPanel.canClickNextCustomerButton) {
+        if (!TextAreaPanel.getOrderTextArea().getText().isEmpty() && ButtonPanel.isCanClickNextCustomerButton()) {
             for (BoughtItem boughtItem : Order.getOrders()) {
                 SalesInventory.appendSalesInventory(boughtItem);
             }
@@ -24,7 +24,8 @@ public class NextCustomerButtonHandler implements ActionListener {
             for (JButton button : ProductPanel.getButtons()) {
                 button.setEnabled(true);
             }
-            ButtonPanel.canClickNextCustomerButton = false;
+            ButtonPanel.setCanClickNextCustomerButton(false);
+            ButtonPanel.setCanClickConfirmButton(true);
         } else {
             JOptionPane.showMessageDialog(null, "Please complete current order!");
         }

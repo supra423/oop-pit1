@@ -14,20 +14,25 @@ import static org.example.gui.MainPanel.BottomPanel.CashFieldPanel.*;
 public class ConfirmButtonHandler implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         if (!TextAreaPanel.getOrderTextArea().getText().isEmpty() && !Order.getOrders().isEmpty()) {
-            double change = 0;
+            double change;
             try {
                 change = Double.parseDouble(getCashTextField().getText()) - Order.calculateTotal();
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Only input numbers!");
+                return;
             }
             if (change < 0) {
                 JOptionPane.showMessageDialog(null, "Insufficient cash!");
-            } else {
+            } else if (!ButtonPanel.isCanClickConfirmButton()) {
+                JOptionPane.showMessageDialog(null, "You have already confirmed the order!");
+            }
+                else {
                 CashFieldPanel.getChangeLabel().setText(String.format("<html>Change:<br>Php%.2f</html>", change));
                 for (JButton button : ProductPanel.getButtons()) {
                     button.setEnabled(false);
                 }
-                ButtonPanel.canClickNextCustomerButton = true;
+                ButtonPanel.setCanClickNextCustomerButton(true);
+                ButtonPanel.setCanClickConfirmButton(false);
             }
         } else {
             JOptionPane.showMessageDialog(null, "You haven't placed an order yet!");

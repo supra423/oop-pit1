@@ -9,7 +9,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ButtonPanel extends JPanel {
-    public static boolean canClickNextCustomerButton = false;
+    private static boolean canClickNextCustomerButton = false;
+    private static boolean canClickConfirmButton = true;
     public ButtonPanel() {
         this.setLayout(new GridLayout());
         this.setBackground(Color.decode("#9EC3DD"));
@@ -99,5 +100,18 @@ public class ButtonPanel extends JPanel {
 
         this.add(panel1);
         this.add(panel2);
+    }
+    public static void setCanClickNextCustomerButton(boolean val) {
+        canClickNextCustomerButton = val;
+    }
+    public static boolean isCanClickNextCustomerButton() {
+        return canClickNextCustomerButton;
+    }
+
+    public static void setCanClickConfirmButton(boolean val) {
+        canClickConfirmButton = val;
+    }
+    public static boolean isCanClickConfirmButton() {
+        return canClickConfirmButton;
     }
 }
