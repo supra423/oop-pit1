@@ -16,57 +16,9 @@ public class ButtonPanel extends JPanel {
         this.setBackground(Color.decode("#9EC3DD"));
         this.setPreferredSize(new Dimension(300, 400));
         JPanel panel1 = new JPanel(new GridBagLayout());
-        JPanel panel2 = new JPanel(new GridBagLayout());
         panel1.setBackground(Color.decode("#9EC3DD"));
-        panel2.setBackground(Color.decode("#9EC3DD"));
 
         GridBagConstraints gbc = new GridBagConstraints();
-
-        JButton nextCustomerButton = new JButton();
-        JButton salesInventoryButton = new JButton();
-        NextCustomerButtonHandler nextCustomerButtonHandler = new NextCustomerButtonHandler();
-        SalesInventoryButtonHandler salesInventoryButtonHandler = new SalesInventoryButtonHandler();
-        nextCustomerButton.addActionListener(nextCustomerButtonHandler);
-        salesInventoryButton.addActionListener(salesInventoryButtonHandler);
-        nextCustomerButton.setBackground(Color.decode("#7E5303"));
-        salesInventoryButton.setBackground(Color.decode("#5A0B88"));
-        nextCustomerButton.setLayout(new GridBagLayout());
-        salesInventoryButton.setLayout(new GridBagLayout());
-
-        JLabel nextCustomerLabel1 = new JLabel("NEXT");
-        JLabel nextCustomerLabel2 = new JLabel("CUSTOMER");
-        nextCustomerLabel1.setForeground(Color.WHITE);
-        nextCustomerLabel2.setForeground(Color.WHITE);
-
-        JLabel salesInventoryLabel1 = new JLabel("SALES");
-        JLabel salesInventoryLabel2 = new JLabel("INVENTORY");
-        salesInventoryLabel1.setForeground(Color.WHITE);
-        salesInventoryLabel2.setForeground(Color.WHITE);
-
-        salesInventoryLabel1.setFont(new Font("Arial", Font.BOLD, 20));
-        salesInventoryLabel2.setFont(new Font("Arial", Font.BOLD, 20));
-
-        nextCustomerLabel1.setFont(new Font("Arial", Font.BOLD, 20));
-        nextCustomerLabel2.setFont(new Font("Arial", Font.BOLD, 20));
-
-        gbc.gridy = 0;
-        nextCustomerButton.add(nextCustomerLabel1, gbc);
-        gbc.gridy = 1;
-        nextCustomerButton.add(nextCustomerLabel2, gbc);
-        nextCustomerButton.setPreferredSize(new Dimension(100, 100));
-
-        gbc.gridy = 0;
-        salesInventoryButton.add(salesInventoryLabel1, gbc);
-        gbc.gridy = 1;
-        salesInventoryButton.add(salesInventoryLabel2, gbc);
-        salesInventoryButton.setPreferredSize(new Dimension(100, 100));
-
-        gbc.gridy = 0;
-        gbc.insets = new Insets(10, 10, 10, 11);
-        panel1.add(nextCustomerButton, gbc);
-
-        panel1.add(salesInventoryButton, gbc);
-
         JButton confirmButton = new JButton();
         JButton cancelButton = new JButton();
         confirmButton.setLayout(new GridBagLayout());
@@ -89,18 +41,58 @@ public class ButtonPanel extends JPanel {
         confirmButton.add(confirmButtonLabel);
         cancelButton.add(cancelButtonLabel);
 
-        confirmButton.setPreferredSize(new Dimension(100, 80));
-        cancelButton.setPreferredSize(new Dimension(100, 80));
-
+        confirmButton.setPreferredSize(new Dimension(220, 75));
+        cancelButton.setPreferredSize(new Dimension(220, 75));
         gbc.gridy = 0;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        panel2.add(confirmButton, gbc);
+        gbc.insets = new Insets(10, 10, 10, 10);
+        panel1.add(confirmButton, gbc);
 
         gbc.gridy = 1;
-        panel2.add(cancelButton, gbc);
+        panel1.add(cancelButton, gbc);
 
-//        this.add(panel1);
-        this.add(panel2);
+        JButton nextCustomerButton = new JButton();
+        JButton salesInventoryButton = new JButton();
+        NextCustomerButtonHandler nextCustomerButtonHandler = new NextCustomerButtonHandler();
+        SalesInventoryButtonHandler salesInventoryButtonHandler = new SalesInventoryButtonHandler();
+        nextCustomerButton.addActionListener(nextCustomerButtonHandler);
+        salesInventoryButton.addActionListener(salesInventoryButtonHandler);
+        nextCustomerButton.setBackground(Color.decode("#7E5303"));
+        salesInventoryButton.setBackground(Color.decode("#5A0B88"));
+        nextCustomerButton.setLayout(new GridBagLayout());
+        salesInventoryButton.setLayout(new GridBagLayout());
+
+        JLabel nextCustomerLabel1 = new JLabel("NEXT CUSTOMER");
+        nextCustomerLabel1.setForeground(Color.WHITE);
+        nextCustomerLabel1.setFont(new Font("Arial", Font.BOLD, 20));
+
+        JLabel salesInventoryLabel1 = new JLabel("SALES");
+        JLabel salesInventoryLabel2 = new JLabel("INVENTORY");
+        salesInventoryLabel1.setForeground(Color.WHITE);
+        salesInventoryLabel2.setForeground(Color.WHITE);
+
+        salesInventoryLabel1.setFont(new Font("Arial", Font.BOLD, 20));
+        salesInventoryLabel2.setFont(new Font("Arial", Font.BOLD, 20));
+
+        gbc.gridy = 0;
+        nextCustomerButton.add(nextCustomerLabel1, gbc);
+        gbc.gridy = 1;
+        nextCustomerButton.setPreferredSize(new Dimension(220, 75));
+        salesInventoryButton.setPreferredSize(new Dimension(220, 75));
+
+        gbc.gridy = 0;
+        gbc.insets = new Insets(0, 0, 0, 0);
+        salesInventoryButton.add(salesInventoryLabel1, gbc);
+        gbc.gridy = 1;
+        salesInventoryButton.add(salesInventoryLabel2, gbc);
+
+        gbc.gridy = 2;
+        gbc.insets = new Insets(10, 10, 10, 10);
+        panel1.add(nextCustomerButton, gbc);
+
+        gbc.gridy = 3;
+        panel1.add(salesInventoryButton, gbc);
+
+        this.add(panel1);
     }
     public static void setCanClickNextCustomerButton(boolean val) {
         canClickNextCustomerButton = val;
