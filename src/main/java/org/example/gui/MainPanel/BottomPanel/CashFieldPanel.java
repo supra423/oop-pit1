@@ -67,13 +67,7 @@ public class CashFieldPanel extends JPanel {
         panel1.add(cashAndChangePanel, gbc);
         this.add(panel1);
     }
-    public static JLabel getTotalLabel() {
-        return totalLabel;
-    }
-    public static JLabel getChangeLabel() {
-        return changeLabel;
-    }
-    public static JTextField getCashTextField() {
-        return cashTextField;
-    }
+    public static JLabel getTotalLabel() { return totalLabel; }
+    public static JLabel getChangeLabel() { return changeLabel; }
+    public static JTextField getCashTextField() { return cashTextField; }
 }

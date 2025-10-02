@@ -8,7 +8,7 @@ with a constructor and getter functions. This class is usually
 used when defining the hardcoded products itself
 
 note: Record classes are classes that already has a canonical constructor,
-getters, setters and other special methods, it is just a fancy way to reduce
+getters, and other special methods, it is just a fancy way to reduce some
 boilerplate.
 
 PRODUCTDATA CLASS:

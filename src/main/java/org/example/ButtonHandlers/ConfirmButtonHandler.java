@@ -25,21 +25,20 @@ public class ConfirmButtonHandler implements ActionListener {
                 // 2099.9700000000000000001. What I did here is just round the actual change
                 // to 2 decimal places.
                 roundedChange = Math.round(change * 100.0) / 100.0;
+                if (roundedChange < 0) {
+                    JOptionPane.showMessageDialog(null, "Insufficient cash!");
+                } else if (!ButtonPanel.isCanClickConfirmButton()) {
+                    JOptionPane.showMessageDialog(null, "You have already confirmed the order!");
+                } else {
+                    CashFieldPanel.getChangeLabel().setText(String.format("Change: Php%.2f", roundedChange));
+                    for (JButton button : ProductPanel.getButtons()) {
+                        button.setEnabled(false);
+                    }
+                    ButtonPanel.setCanClickNextCustomerButton(true);
+                    ButtonPanel.setCanClickConfirmButton(false);
+                }
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Only input numbers!");
-                return;
-            }
-            if (roundedChange < 0) {
-                JOptionPane.showMessageDialog(null, "Insufficient cash!");
-            } else if (!ButtonPanel.isCanClickConfirmButton()) {
-                JOptionPane.showMessageDialog(null, "You have already confirmed the order!");
-            } else {
-                CashFieldPanel.getChangeLabel().setText(String.format("Change: Php%.2f", roundedChange));
-                for (JButton button : ProductPanel.getButtons()) {
-                    button.setEnabled(false);
-                }
-                ButtonPanel.setCanClickNextCustomerButton(true);
-                ButtonPanel.setCanClickConfirmButton(false);
             }
         } else {
             JOptionPane.showMessageDialog(null, "You haven't placed an order yet!");

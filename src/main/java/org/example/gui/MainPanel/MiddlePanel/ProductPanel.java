@@ -40,7 +40,5 @@ public class ProductPanel extends JPanel {
 
         this.add(innerProductPanel);
     }
-    public static JButton[] getButtons() {
-        return buttons;
-    }
+    public static JButton[] getButtons() { return buttons; }
 }

@@ -85,17 +85,8 @@ public class ButtonPanel extends JPanel {
 
         this.add(panel1);
     }
-    public static void setCanClickNextCustomerButton(boolean val) {
-        canClickNextCustomerButton = val;
-    }
-    public static boolean isCanClickNextCustomerButton() {
-        return canClickNextCustomerButton;
-    }
-
-    public static void setCanClickConfirmButton(boolean val) {
-        canClickConfirmButton = val;
-    }
-    public static boolean isCanClickConfirmButton() {
-        return canClickConfirmButton;
-    }
+    public static void setCanClickNextCustomerButton(boolean val) { canClickNextCustomerButton = val; }
+    public static boolean isCanClickNextCustomerButton() { return canClickNextCustomerButton; }
+    public static void setCanClickConfirmButton(boolean val) { canClickConfirmButton = val; }
+    public static boolean isCanClickConfirmButton() { return canClickConfirmButton; }
 }
