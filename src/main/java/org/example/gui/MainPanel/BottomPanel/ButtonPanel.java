@@ -1,9 +1,6 @@
 package org.example.gui.MainPanel.BottomPanel;
 
-import org.example.ButtonHandlers.CancelButtonHandler;
-import org.example.ButtonHandlers.ConfirmButtonHandler;
-import org.example.ButtonHandlers.NextCustomerButtonHandler;
-import org.example.ButtonHandlers.SalesInventoryButtonHandler;
+import org.example.ButtonHandlers.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,28 +18,26 @@ public class ButtonPanel extends JPanel {
         GridBagConstraints gbc = new GridBagConstraints();
         JButton confirmButton = new JButton();
         JButton cancelButton = new JButton();
-        confirmButton.setLayout(new GridBagLayout());
         ConfirmButtonHandler confirmButtonHandler = new ConfirmButtonHandler();
         CancelButtonHandler cancelButtonHandler = new CancelButtonHandler();
-        cancelButton.addActionListener(cancelButtonHandler);
-        confirmButton.addActionListener(confirmButtonHandler);
+        confirmButton.setLayout(new GridBagLayout());
         cancelButton.setLayout(new GridBagLayout());
+        confirmButton.addActionListener(confirmButtonHandler);
+        cancelButton.addActionListener(cancelButtonHandler);
         confirmButton.setBackground(Color.decode("#0D9316"));
         cancelButton.setBackground(Color.decode("#DE3314"));
+        confirmButton.setPreferredSize(new Dimension(220, 75));
+        cancelButton.setPreferredSize(new Dimension(220, 75));
 
         JLabel confirmButtonLabel = new JLabel("CONFIRM");
         confirmButtonLabel.setForeground(Color.WHITE);
         JLabel cancelButtonLabel = new JLabel("CANCEL");
         cancelButtonLabel.setForeground(Color.WHITE);
-
         confirmButtonLabel.setFont(new Font("Arial", Font.BOLD, 20));
         cancelButtonLabel.setFont(new Font("Arial", Font.BOLD, 20));
-
         confirmButton.add(confirmButtonLabel);
         cancelButton.add(cancelButtonLabel);
 
-        confirmButton.setPreferredSize(new Dimension(220, 75));
-        cancelButton.setPreferredSize(new Dimension(220, 75));
         gbc.gridy = 0;
         gbc.insets = new Insets(10, 10, 10, 10);
         panel1.add(confirmButton, gbc);
@@ -64,12 +59,10 @@ public class ButtonPanel extends JPanel {
         JLabel nextCustomerLabel1 = new JLabel("NEXT CUSTOMER");
         nextCustomerLabel1.setForeground(Color.WHITE);
         nextCustomerLabel1.setFont(new Font("Arial", Font.BOLD, 20));
-
         JLabel salesInventoryLabel1 = new JLabel("SALES");
         JLabel salesInventoryLabel2 = new JLabel("INVENTORY");
         salesInventoryLabel1.setForeground(Color.WHITE);
         salesInventoryLabel2.setForeground(Color.WHITE);
-
         salesInventoryLabel1.setFont(new Font("Arial", Font.BOLD, 20));
         salesInventoryLabel2.setFont(new Font("Arial", Font.BOLD, 20));
 
@@ -84,11 +77,9 @@ public class ButtonPanel extends JPanel {
         salesInventoryButton.add(salesInventoryLabel1, gbc);
         gbc.gridy = 1;
         salesInventoryButton.add(salesInventoryLabel2, gbc);
-
         gbc.gridy = 2;
         gbc.insets = new Insets(10, 10, 10, 10);
         panel1.add(nextCustomerButton, gbc);
-
         gbc.gridy = 3;
         panel1.add(salesInventoryButton, gbc);
 

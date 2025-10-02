@@ -1,10 +1,8 @@
 package org.example.ButtonHandlers;
-import org.example.BoughtItem;
-import org.example.SalesInventory;
+import org.example.*;
 
 import javax.swing.JOptionPane;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.ArrayList;
 
 public class SalesInventoryButtonHandler implements ActionListener {
