@@ -1,5 +1,11 @@
 So now you're here because you might be wondering how does this work?
-As I'm writing this, I'm just going to run through the main logic
+
+Mind that I wrote this file just for my group mates to understand the
+program well enough, so they are pretty much the target audience of this
+documentation lol
+
+but if you're not one of them, that's fine because
+I'm just going to run through the main logic
 by explaining the classes and a bit with the GUI.
 
 PRODUCTS CLASS:
@@ -37,3 +43,45 @@ will be used to display the products. This also has a getter function
 SALESINVENTORY CLASS:
 The SalesInventory Class contains an ArrayList which stores the Order objects, not much has been
 added in this class by the time this has been last written.
+
+ ##### GUI #####
+For the GUI stuff, explaining the entire stuff is hard as hell, you might want to read the modules
+Ma'am gave us to at least know half the stuff I'm saying and understand what is going on,
+
+As you can see, in there is this "gui" directory, this is where all the gui components are stored,
+inside the gui directory also contain certain subdirectories that are also gui components,
+
+If you noticed it, I structured the gui directory in a form of a hierarchy
+the deeper you go inside the subdirectories of the gui directory, the deeper you are in
+the hierarchy. I structured the GUI components the same way!
+
+The "highest" component in the hierarchy is obviously the Window (JFrame),
+inside the Window component, there is a single "MainPanel" (JPanel) which also
+contains the three major subpanels: LogoPanel, MiddlePanel, BottomPanel (Also JPanels).
+These 3 major subpanels also contain their own panels and components!
+I treated every single panels as if they are objects,
+that's why I created classes for each of them.
+
+You already know where this is all going so I'm not gonna waste my time typing a more
+detailed description of the gui directory, just remember that each panels also has subpanels
+which also has more subpanels and so on, it is quite a bit complex.
+
+A lot of these subpanels, including components like the buttons have different Layout Managers!
+I used GridBagLayout for the Window because when you only place one component inside a GridBagLayout,
+it automatically places that component at the center, so in a way I use it as a way to "center"
+a certain component, that's why it is the most used layout manager!
+
+The MainPanel uses BorderLayout, it is a convenient layout manager to just dictate which side of
+the border you want to "stick" a component to.
+
+For some classes especially the ProductPanel, I used GridLayout which basically stores every component
+you add inside a grid with each cell of the grid all having equal dimensions, it kind of
+automatically "allocates" space for each component, the difference between GridLayout and GridBagLayout
+is that in GridLayout, you can't change the dimensions of each cell inside the grid, it is really
+quick to setup the GUI using GridLayout but in exchange for flexibility
+
+While in GridBagLayout, you have more flexibility on how the components are stored inside the grid,
+you can have different dimensions for each cell of the grid! It is really handy!
+And you can also use the class GridBagConstraints which gives you more flexibility on how
+components inside the grid are arranged, another reason why it is the most used layout manager here,
+it is pretty much my FAVORITE layout manager.
