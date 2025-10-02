@@ -28,9 +28,7 @@ public record ProductButtonHandler(Product product) implements ActionListener {
                     CashFieldPanel.getTotalLabel().setText(String.format("Total: Php%.2f", Order.calculateTotal()));
                     break;
                 }
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Please input a valid quantity!");
-            }
+            } catch (NumberFormatException e) { JOptionPane.showMessageDialog(null, "Please input a valid quantity!"); }
         }
     }
 }

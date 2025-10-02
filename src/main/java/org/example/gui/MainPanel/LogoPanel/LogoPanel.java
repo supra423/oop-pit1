@@ -12,9 +12,7 @@ public class LogoPanel extends JPanel {
         GridBagConstraints gbc = new GridBagConstraints();
         this.setPreferredSize(new Dimension(1300, 100));
         this.setBackground(Color.decode("#2A354E"));
-        ImageIcon logo = new ImageIcon(
-                Objects.requireNonNull(Inventory.class.getResource("/assets/logoEdited.png"))
-        );
+        ImageIcon logo = new ImageIcon(Objects.requireNonNull(Inventory.class.getResource("/assets/logoEdited.png")));
 
         Image scaledLogo = logo.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
 
@@ -28,6 +26,7 @@ public class LogoPanel extends JPanel {
         companyLabel.setForeground(Color.decode("#3BB4FF"));
         sloganLabel.setForeground(Color.WHITE);
         gbc.insets = new Insets(10, 10, 10, 10);
+
         this.add(labelLogo, gbc);
         this.add(companyLabel, gbc);
         this.add(sloganLabel, gbc);
