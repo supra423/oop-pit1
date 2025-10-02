@@ -32,13 +32,21 @@ user to type in the quantity of the product chosen, after that, an instance of a
 from the BoughtItem class is then created.
 
 ORDER CLASS:
-The Order Class contains an ArrayList which stores the BoughtItem objects, there is also
-a unique id for it and a totalcost by adding up all the price in the arraylist.
+The Order Class contains an ArrayList which stores the BoughtItem objects, and other methods
+like calculating the total cost of the order and to reset the ArrayList
+
+PRODUCTDATA CLASS:
+This record class was added pretty late, the only usage of this class is to just reduce
+the amount of lines of code in the Inventory class, it is basically just used to store
+data of the product like the path of the image of that product and its size dimensions.
+Using instances of the ProductData class, I can store them inside an array and iterate
+through it using a for loop, significantly reducing the amount of lines.
 
 INVENTORY CLASS:
-The Inventory Class contains the hardcoded objects from the Product class,
-The name and price are hardcoded here and then stored inside an array so that this array
-will be used to display the products. This also has a getter function
+The Inventory Class has an array that contains the hardcoded ProductData objects,
+The name, prices, imageicon and its dimensions are hardcoded here and then stored
+inside an array so that this array will be used to iterate through using a for loop
+when it is time to display.
 
 SALESINVENTORY CLASS:
 The SalesInventory Class contains an ArrayList which stores the Order objects, not much has been
