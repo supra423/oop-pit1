@@ -14,19 +14,28 @@ public class ConfirmButtonHandler implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         if (!TextAreaPanel.getOrderTextArea().getText().isEmpty() && !Order.getOrders().isEmpty()) {
             double change;
+            double roundedChange;
             try {
                 change = Double.parseDouble(getCashTextField().getText()) - Order.calculateTotal();
+
+                // A little bug fix, bugs sometimes happen when dealing with floating point
+                // precision numbers. When the user inputs the exact value, say the total
+                // payment is 2099.97, the user may put the exact values 2099.97 and then the
+                // system would prompt insufficient cash because binary floating point
+                // numbers cant really represent the exact value, 2099.97 might actually be
+                // 2099.9700000000000000001. What I did here is just round the actual change
+                // to 2 decimal places.
+                roundedChange = Math.round(change * 100.0) / 100.0;
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Only input numbers!");
                 return;
             }
-            if (change < 0) {
+            if (roundedChange < 0) {
                 JOptionPane.showMessageDialog(null, "Insufficient cash!");
             } else if (!ButtonPanel.isCanClickConfirmButton()) {
                 JOptionPane.showMessageDialog(null, "You have already confirmed the order!");
-            }
-                else {
-                CashFieldPanel.getChangeLabel().setText(String.format("Change: Php%.2f", change));
+            } else {
+                CashFieldPanel.getChangeLabel().setText(String.format("Change: Php%.2f", roundedChange));
                 for (JButton button : ProductPanel.getButtons()) {
                     button.setEnabled(false);
                 }

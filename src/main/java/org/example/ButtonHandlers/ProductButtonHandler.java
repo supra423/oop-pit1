@@ -27,7 +27,7 @@ public record ProductButtonHandler(Product product) implements ActionListener {
                             "%s x %d ----- Php%.2f\n", boughtItem.getProduct().name(), boughtItem.getQuantity(), priceTimesQuantity
                     );
                     TextAreaPanel.getOrderTextArea().append(messageAppend1);
-                    CashFieldPanel.getTotalLabel().setText(String.format("<html>Total:<br>Php%.2f</html>", Order.calculateTotal()));
+                    CashFieldPanel.getTotalLabel().setText(String.format("Total: Php%.2f", Order.calculateTotal()));
                     break;
                 }
             } catch (NumberFormatException e) {
