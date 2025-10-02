@@ -1,63 +1,73 @@
 package org.example.gui.MainPanel.BottomPanel;
 
+import javax.sound.sampled.Line;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class CashFieldPanel extends JPanel {
-    private static JLabel totalLabel = new JLabel("<html>Total:<br>Php00.00</html>");
-    private static JLabel changeLabel = new JLabel("<html>Change:<br>Php00.00</html>");
-    private static JTextField cashTextField = new JTextField(6);
+    private static final JLabel totalLabel = new JLabel("Total: Php00.00");
+    private static final JLabel changeLabel = new JLabel("Change: Php00.00");
+    private static final JTextField cashTextField = new JTextField(14);
     public CashFieldPanel() {
         this.setLayout(new GridLayout());
         this.setBackground(Color.decode("#9EC3DD"));
+        this.setPreferredSize(new Dimension(500, 350));
         JPanel panel1 = new JPanel(new GridBagLayout());
         panel1.setBackground(Color.decode("#9EC3DD"));
 
         JPanel totalPanel = new JPanel(new GridBagLayout());
-        totalLabel.setFont(new Font("Arial", Font.BOLD, 32));
+        totalLabel.setFont(new Font("Arial", Font.BOLD, 30));
         totalPanel.setBackground(Color.decode("#E8F6FF"));
-        totalPanel.setPreferredSize(new Dimension(300, 180));
-        totalPanel.add(totalLabel);
-        panel1.add(totalPanel);
-
-        JPanel panel2 = new JPanel(new GridBagLayout());
-        panel2.setBackground(Color.decode("#9EC3DD"));
+        totalPanel.setPreferredSize(new Dimension(480, 160));
+        JPanel innerTotalPanel = new JPanel(new GridBagLayout());
+        innerTotalPanel.setPreferredSize(new Dimension(460, 130));
+        innerTotalPanel.setBackground(Color.WHITE);
+        innerTotalPanel.setBorder(new LineBorder(Color.decode("#98CEE0")));
+        innerTotalPanel.add(totalLabel);
+        totalPanel.add(innerTotalPanel);
 
         GridBagConstraints gbc = new GridBagConstraints();
 
         JPanel cashPanel = new JPanel(new GridBagLayout());
-        JLabel cashLabel = new JLabel("Cash:");
-        JLabel phpLabel = new JLabel("Php");
+        JLabel cashLabel = new JLabel("Cash: Php");
 
-        cashLabel.setFont(new Font("Arial", Font.BOLD, 32));
-        cashTextField.setFont(new Font("Arial", Font.BOLD, 32));
-        phpLabel.setFont(new Font("Arial", Font.BOLD, 32));
-        cashPanel.setBackground(Color.decode("#E8F6FF"));
-        cashPanel.setPreferredSize(new Dimension(300, 85));
+        cashLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        cashLabel.setBorder(new EmptyBorder(0, 10, 0, 10));
+        cashTextField.setFont(new Font("Arial", Font.BOLD, 24));
+        cashPanel.setBackground(Color.WHITE);
+        cashPanel.setPreferredSize(new Dimension(460, 60));
+        cashPanel.setBorder(new LineBorder(Color.decode("#98CEE0")));
 
         gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.WEST;
         cashPanel.add(cashLabel, gbc);
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        cashPanel.add(phpLabel, gbc);
-        gbc.gridx = 1;
-        gbc.gridy = 1;
         cashPanel.add(cashTextField, gbc);
 
         JPanel changePanel = new JPanel();
-        changePanel.setBackground(Color.decode("#E8F6FF"));
-        changePanel.setPreferredSize(new Dimension(300, 85));
-        changeLabel.setFont(new Font("Arial", Font.BOLD, 32));
+        changePanel.setBackground(Color.WHITE);
+        changePanel.setPreferredSize(new Dimension(460, 60));
+        changeLabel.setFont(new Font("Arial", Font.BOLD, 30));
+        changePanel.setBorder(new LineBorder(Color.decode("#98CEE0")));
         changePanel.add(changeLabel);
 
-        gbc.insets = new Insets(5, 5, 5, 5);
+        JPanel cashAndChangePanel = new JPanel(new GridBagLayout()); // group both change and cash panels
+        cashAndChangePanel.setPreferredSize(new Dimension(480, 160));
+        cashAndChangePanel.setBackground(Color.decode("#E8F6FF"));
         gbc.gridy = 0;
-        panel2.add(cashPanel, gbc);
+        gbc.weightx = 0;
+        gbc.weighty = 1;
+        cashAndChangePanel.add(cashPanel, gbc);
         gbc.gridy = 1;
-        panel2.add(changePanel, gbc);
+        cashAndChangePanel.add(changePanel, gbc);
 
+        gbc.gridy = 0;
+        gbc.gridx = 0;
+        panel1.add(totalPanel, gbc);
+        gbc.gridy = 1;
+        panel1.add(cashAndChangePanel, gbc);
         this.add(panel1);
-        this.add(panel2);
     }
     public static JLabel getTotalLabel() {
         return totalLabel;

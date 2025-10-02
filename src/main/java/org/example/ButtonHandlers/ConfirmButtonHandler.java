@@ -26,7 +26,7 @@ public class ConfirmButtonHandler implements ActionListener {
                 JOptionPane.showMessageDialog(null, "You have already confirmed the order!");
             }
                 else {
-                CashFieldPanel.getChangeLabel().setText(String.format("<html>Change:<br>Php%.2f</html>", change));
+                CashFieldPanel.getChangeLabel().setText(String.format("Change: Php%.2f", change));
                 for (JButton button : ProductPanel.getButtons()) {
                     button.setEnabled(false);
                 }

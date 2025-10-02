@@ -1,18 +1,21 @@
 package org.example.gui.MainPanel.BottomPanel;
 
+import javax.sound.sampled.Line;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class TextAreaPanel extends JPanel {
-    private static final JTextArea orderTextArea = new JTextArea(36, 29);
+    private static final JTextArea orderTextArea = new JTextArea();
     public TextAreaPanel() {
         this.setLayout(new GridLayout());
-        this.setBackground(Color.decode("#888888"));
-        this.setPreferredSize(new Dimension(400, 700));
+        this.setPreferredSize(new Dimension(470, 370));
 
-        orderTextArea.setBackground(Color.decode("#5A81A1"));
+        orderTextArea.setBackground(Color.decode("#E8F6FF"));
         orderTextArea.setFont(new Font("Arial", Font.BOLD, 18));
-        orderTextArea.setForeground(Color.WHITE);
+        orderTextArea.setForeground(Color.BLACK);
+        orderTextArea.setBorder(new LineBorder(Color.decode("#98CEE0")));
         orderTextArea.setEditable(false);
 
         JScrollPane scrollPane = new JScrollPane(orderTextArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);

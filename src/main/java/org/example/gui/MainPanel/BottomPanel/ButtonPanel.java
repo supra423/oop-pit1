@@ -12,8 +12,9 @@ public class ButtonPanel extends JPanel {
     private static boolean canClickNextCustomerButton = false;
     private static boolean canClickConfirmButton = true;
     public ButtonPanel() {
-        this.setLayout(new GridLayout());
+        this.setLayout(new GridBagLayout());
         this.setBackground(Color.decode("#9EC3DD"));
+        this.setPreferredSize(new Dimension(300, 400));
         JPanel panel1 = new JPanel(new GridBagLayout());
         JPanel panel2 = new JPanel(new GridBagLayout());
         panel1.setBackground(Color.decode("#9EC3DD"));
@@ -52,13 +53,13 @@ public class ButtonPanel extends JPanel {
         nextCustomerButton.add(nextCustomerLabel1, gbc);
         gbc.gridy = 1;
         nextCustomerButton.add(nextCustomerLabel2, gbc);
-        nextCustomerButton.setPreferredSize(new Dimension(130, 170));
+        nextCustomerButton.setPreferredSize(new Dimension(100, 100));
 
         gbc.gridy = 0;
         salesInventoryButton.add(salesInventoryLabel1, gbc);
         gbc.gridy = 1;
         salesInventoryButton.add(salesInventoryLabel2, gbc);
-        salesInventoryButton.setPreferredSize(new Dimension(130, 170));
+        salesInventoryButton.setPreferredSize(new Dimension(100, 100));
 
         gbc.gridy = 0;
         gbc.insets = new Insets(10, 10, 10, 11);
@@ -82,14 +83,14 @@ public class ButtonPanel extends JPanel {
         JLabel cancelButtonLabel = new JLabel("CANCEL");
         cancelButtonLabel.setForeground(Color.WHITE);
 
-        confirmButtonLabel.setFont(new Font("Arial", Font.BOLD, 40));
-        cancelButtonLabel.setFont(new Font("Arial", Font.BOLD, 40));
+        confirmButtonLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        cancelButtonLabel.setFont(new Font("Arial", Font.BOLD, 20));
 
         confirmButton.add(confirmButtonLabel);
         cancelButton.add(cancelButtonLabel);
 
-        confirmButton.setPreferredSize(new Dimension(300, 80));
-        cancelButton.setPreferredSize(new Dimension(300, 80));
+        confirmButton.setPreferredSize(new Dimension(100, 80));
+        cancelButton.setPreferredSize(new Dimension(100, 80));
 
         gbc.gridy = 0;
         gbc.insets = new Insets(5, 5, 5, 5);
@@ -98,7 +99,7 @@ public class ButtonPanel extends JPanel {
         gbc.gridy = 1;
         panel2.add(cancelButton, gbc);
 
-        this.add(panel1);
+//        this.add(panel1);
         this.add(panel2);
     }
     public static void setCanClickNextCustomerButton(boolean val) {
