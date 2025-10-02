@@ -3,8 +3,7 @@ import org.example.Order;
 import org.example.gui.MainPanel.BottomPanel.ButtonPanel;
 import org.example.gui.MainPanel.BottomPanel.CashFieldPanel;
 import org.example.gui.MainPanel.MiddlePanel.ProductPanel;
-import org.example.gui.MainPanel.MiddlePanel.ProductPanel.*;
-import org.example.gui.MainPanel.MiddlePanel.TextAreaPanel;
+import org.example.gui.MainPanel.BottomPanel.TextAreaPanel;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -27,7 +26,7 @@ public class ConfirmButtonHandler implements ActionListener {
                 JOptionPane.showMessageDialog(null, "You have already confirmed the order!");
             }
                 else {
-                CashFieldPanel.getChangeLabel().setText(String.format("<html>Change:<br>Php%.2f</html>", change));
+                CashFieldPanel.getChangeLabel().setText(String.format("Change: Php%.2f", change));
                 for (JButton button : ProductPanel.getButtons()) {
                     button.setEnabled(false);
                 }

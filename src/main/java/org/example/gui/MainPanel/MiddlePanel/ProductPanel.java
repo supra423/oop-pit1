@@ -12,11 +12,11 @@ public class ProductPanel extends JPanel {
     private static final JButton[] buttons = new JButton[NUMBER_OF_BUTTONS];
     public ProductPanel() {
         this.setLayout(new GridBagLayout());
-        this.setPreferredSize(new Dimension(880, 680));
+        this.setPreferredSize(new Dimension(1300, 480));
         this.setBackground(Color.decode("#B8E4FF"));
-        JPanel innerProductPanel = new JPanel(new GridLayout(3, 3));
+        JPanel innerProductPanel = new JPanel(new GridLayout(2, 4));
         innerProductPanel.setBackground(Color.decode("#9EC3DD"));
-        innerProductPanel.setPreferredSize(new Dimension(860, 680));
+        innerProductPanel.setPreferredSize(new Dimension(1285, 460));
         GridBagConstraints gbc = new GridBagConstraints();
 
         for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {

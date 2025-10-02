@@ -4,7 +4,7 @@ import org.example.BoughtItem;
 import org.example.Order;
 import org.example.Product;
 import org.example.gui.MainPanel.BottomPanel.CashFieldPanel;
-import org.example.gui.MainPanel.MiddlePanel.TextAreaPanel;
+import org.example.gui.MainPanel.BottomPanel.TextAreaPanel;
 
 import javax.swing.*;
 import java.awt.event.*;

@@ -11,7 +11,7 @@ public class LogoPanel extends JPanel {
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         this.setPreferredSize(new Dimension(1300, 100));
-        this.setBackground(Color.decode("#9EC3DD"));
+        this.setBackground(Color.decode("#2A354E"));
         ImageIcon logo = new ImageIcon(
                 Objects.requireNonNull(Inventory.class.getResource("/assets/logoEdited.png"))
         );
@@ -22,10 +22,14 @@ public class LogoPanel extends JPanel {
 
         JLabel labelLogo = new JLabel(newLogo);
         JLabel companyLabel = new JLabel("JNJS");
+        JLabel sloganLabel = new JLabel("| Experience the Boldness.");
         companyLabel.setFont(new Font("Arial", Font.BOLD, 40));
-        gbc.anchor = GridBagConstraints.WEST;
+        sloganLabel.setFont(new Font("Arial", Font.BOLD, 35));
+        companyLabel.setForeground(Color.decode("#3BB4FF"));
+        sloganLabel.setForeground(Color.WHITE);
+        gbc.insets = new Insets(10, 10, 10, 10);
         this.add(labelLogo, gbc);
-        gbc.weightx = 1.0;
         this.add(companyLabel, gbc);
+        this.add(sloganLabel, gbc);
     }
 }

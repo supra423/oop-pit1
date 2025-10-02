@@ -5,6 +5,7 @@ import org.example.Order;
 import org.example.SalesInventory;
 import org.example.gui.MainPanel.BottomPanel.ButtonPanel;
 import org.example.gui.MainPanel.BottomPanel.CashFieldPanel;
+import org.example.gui.MainPanel.BottomPanel.TextAreaPanel;
 import org.example.gui.MainPanel.MiddlePanel.*;
 
 import javax.swing.*;
@@ -17,8 +18,8 @@ public class NextCustomerButtonHandler implements ActionListener {
                 SalesInventory.appendSalesInventory(boughtItem);
             }
             Order.resetOrders();
-            CashFieldPanel.getTotalLabel().setText("<html>Total:<br>Php00.00</html>");
-            CashFieldPanel.getChangeLabel().setText("<html>Change:<br>Php00.00</html>");
+            CashFieldPanel.getTotalLabel().setText("Total: Php00.00");
+            CashFieldPanel.getChangeLabel().setText("Change: Php00.00");
             CashFieldPanel.getCashTextField().setText("");
             TextAreaPanel.getOrderTextArea().setText("");
             for (JButton button : ProductPanel.getButtons()) {
