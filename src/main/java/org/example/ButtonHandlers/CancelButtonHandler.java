@@ -17,5 +17,6 @@ public class CancelButtonHandler implements ActionListener {
         for (JButton button : ProductPanel.getButtons()) {
             button.setEnabled(true);
         }
+        ButtonPanel.setCanClickConfirmButton(true);
     }
 }

@@ -13,9 +13,7 @@ public class Order {
     }
     public static double calculateTotal() {
         double totalCost = 0;
-        for (BoughtItem boughtItem : orders) {
-            totalCost += boughtItem.getQuantity() * boughtItem.getProduct().price();
-        }
+        for (BoughtItem boughtItem : orders) { totalCost += boughtItem.getQuantity() * boughtItem.getProduct().price(); }
         return totalCost;
     }
     public static void resetOrders() { orders.clear(); }

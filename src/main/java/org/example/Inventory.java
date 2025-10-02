@@ -19,9 +19,7 @@ public class Inventory {
     static {
         inventory = new Product[productData.length];
         for (int i = 0; i < productData.length; i++) {
-            ImageIcon imageIcon = new ImageIcon(
-                    Objects.requireNonNull(Inventory.class.getResource(productData[i].path()))
-            );
+            ImageIcon imageIcon = new ImageIcon(Objects.requireNonNull(Inventory.class.getResource(productData[i].path())));
 
             Image scaledImage = imageIcon.getImage().getScaledInstance(productData[i].width(), productData[i].height(), Image.SCALE_SMOOTH);
             ImageIcon newIcon = new ImageIcon(scaledImage);
