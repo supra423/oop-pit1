@@ -1,7 +1,5 @@
 package org.example.gui.MainPanel.MiddlePanel;
 
-import org.example.gui.MainPanel.BottomPanel.TextAreaPanel;
-
 import javax.swing.*;
 import java.awt.*;
 

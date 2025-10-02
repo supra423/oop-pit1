@@ -1,8 +1,6 @@
 package org.example.ButtonHandlers;
 
-import org.example.BoughtItem;
-import org.example.Order;
-import org.example.Product;
+import org.example.*;
 import org.example.gui.MainPanel.BottomPanel.CashFieldPanel;
 import org.example.gui.MainPanel.BottomPanel.TextAreaPanel;
 

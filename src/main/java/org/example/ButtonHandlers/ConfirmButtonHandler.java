@@ -1,9 +1,8 @@
 package org.example.ButtonHandlers;
+
 import org.example.Order;
-import org.example.gui.MainPanel.BottomPanel.ButtonPanel;
-import org.example.gui.MainPanel.BottomPanel.CashFieldPanel;
+import org.example.gui.MainPanel.BottomPanel.*;
 import org.example.gui.MainPanel.MiddlePanel.ProductPanel;
-import org.example.gui.MainPanel.BottomPanel.TextAreaPanel;
 
 import javax.swing.*;
 import java.awt.event.*;

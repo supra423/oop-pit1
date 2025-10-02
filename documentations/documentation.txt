@@ -1,25 +1,39 @@
 So now you're here because you might be wondering how does this work?
-As I'm writing this, I just started creating this project so a lot of things
-might change in the source code but I'm just going to run through the main logic
-by explaining the classes.
+As I'm writing this, I'm just going to run through the main logic
+by explaining the classes and a bit with the GUI.
 
-Products contain a name and price field, with a constructor and getter functions.
-This class is usually used when defining the hardcoded products itself
+PRODUCTS CLASS:
+Products is a record class which contains a name and price field,
+with a constructor and getter functions. This class is usually
+used when defining the hardcoded products itself
 
+note: Record classes are classes that already has a canonical constructor,
+getters, setters and other special methods, it is just a fancy way to reduce
+boilerplate.
+
+PRODUCTDATA CLASS:
+ProductData is also a record class that is primarily used in the Inventory class
+when hardcoding the values of the products along with its associated image and its
+size dimensions.
+
+BOUGHTITEM CLASS:
 The BoughtItem class only contains a Product type variable and a quantity, the difference
 between the BoughtItem class and Product class is that the BoughtItem class is used
 when actually handling the purchase itself, I initially thought on placing a quantity field
-in the product but it didn't seem to make that much sense, so I instead created a different
-object for it. So whenever a user clicks on a certain product, a pop up menu should prompt the
+in the product, but it didn't seem to make that much sense, so I instead created a different
+object for it. So whenever a user clicks on a certain product, a pop-up menu should prompt the
 user to type in the quantity of the product chosen, after that, an instance of an object
 from the BoughtItem class is then created.
 
+ORDER CLASS:
 The Order Class contains an ArrayList which stores the BoughtItem objects, there is also
 a unique id for it and a totalcost by adding up all the price in the arraylist.
 
+INVENTORY CLASS:
 The Inventory Class contains the hardcoded objects from the Product class,
 The name and price are hardcoded here and then stored inside an array so that this array
 will be used to display the products. This also has a getter function
 
-The OrderHistory Class contains an ArrayList which stores the Order objects, not much has been
+SALESINVENTORY CLASS:
+The SalesInventory Class contains an ArrayList which stores the Order objects, not much has been
 added in this class by the time this has been last written.

@@ -1,13 +1,11 @@
 package org.example.ButtonHandlers;
 
 import org.example.Order;
-import org.example.gui.MainPanel.BottomPanel.CashFieldPanel;
+import org.example.gui.MainPanel.BottomPanel.*;
 import org.example.gui.MainPanel.MiddlePanel.ProductPanel;
-import org.example.gui.MainPanel.BottomPanel.TextAreaPanel;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class CancelButtonHandler implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
