@@ -19,6 +19,8 @@ public class ButtonPanel extends JPanel {
         panel1.setBackground(Color.decode("#9EC3DD"));
         panel2.setBackground(Color.decode("#9EC3DD"));
 
+        GridBagConstraints gbc = new GridBagConstraints();
+
         JButton nextCustomerButton = new JButton();
         JButton salesInventoryButton = new JButton();
         NextCustomerButtonHandler nextCustomerButtonHandler = new NextCustomerButtonHandler();
@@ -29,8 +31,6 @@ public class ButtonPanel extends JPanel {
         salesInventoryButton.setBackground(Color.decode("#5A0B88"));
         nextCustomerButton.setLayout(new GridBagLayout());
         salesInventoryButton.setLayout(new GridBagLayout());
-
-        GridBagConstraints gbc = new GridBagConstraints();
 
         JLabel nextCustomerLabel1 = new JLabel("NEXT");
         JLabel nextCustomerLabel2 = new JLabel("CUSTOMER");

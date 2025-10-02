@@ -5,6 +5,7 @@ import org.example.Order;
 import org.example.SalesInventory;
 import org.example.gui.MainPanel.BottomPanel.ButtonPanel;
 import org.example.gui.MainPanel.BottomPanel.CashFieldPanel;
+import org.example.gui.MainPanel.BottomPanel.TextAreaPanel;
 import org.example.gui.MainPanel.MiddlePanel.*;
 
 import javax.swing.*;

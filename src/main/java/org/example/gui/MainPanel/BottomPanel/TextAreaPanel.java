@@ -1,4 +1,4 @@
-package org.example.gui.MainPanel.MiddlePanel;
+package org.example.gui.MainPanel.BottomPanel;
 
 import javax.swing.*;
 import java.awt.*;
