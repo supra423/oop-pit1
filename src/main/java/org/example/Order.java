@@ -18,7 +18,5 @@ public class Order {
         }
         return totalCost;
     }
-    public static void resetOrders() {
-        orders.clear();
-    }
+    public static void resetOrders() { orders.clear(); }
 }

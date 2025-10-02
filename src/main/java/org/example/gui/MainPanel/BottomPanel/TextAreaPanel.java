@@ -19,7 +19,5 @@ public class TextAreaPanel extends JPanel {
         JScrollPane scrollPane = new JScrollPane(orderTextArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         this.add(scrollPane);
     }
-    static public JTextArea getOrderTextArea() {
-        return orderTextArea;
-    }
+    static public JTextArea getOrderTextArea() { return orderTextArea; }
 }

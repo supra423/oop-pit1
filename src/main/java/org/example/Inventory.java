@@ -29,7 +29,5 @@ public class Inventory {
             inventory[i] = new Product(productData[i].name(), productData[i].price(), newIcon);
         }
     }
-    public Product[] getInventory() {
-        return inventory;
-    }
+    public Product[] getInventory() { return inventory; }
 }
