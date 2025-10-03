@@ -8,19 +8,28 @@ but if you're not one of them, that's fine because
 I'm just going to run through the main logic
 by explaining the classes and a bit with the GUI.
 
-PRODUCTS CLASS:
-Products is a record class which contains a name and price field,
-with a constructor and getter functions. This class is usually
-used when defining the hardcoded products itself
+Take note that this program was created using a more Object-Oriented Approach so
+some stuff that I did in this code may be a bit weird like setting all the fields of
+classes to be "private" and then defining getters and setter methods for them,
+this is just me adhering to OOP design philosophies like encapsulation.
+
+PRODUCTDATA CLASS:
+This record class was added pretty late, the only usage of this class is to just reduce
+the amount of lines of code in the Inventory class, it is basically just used to store
+hardcoded data of the product like the path of the image of that product and its size dimensions.
+The ProductData class is used to define instances of the Product class, providing the
+name, price, and path to the image associated to that particular product.
+Using instances of the ProductData class, I can store them inside an array and iterate
+through it using a for loop, significantly reducing the amount of lines.
 
 note: Record classes are classes that already has a canonical constructor,
 getters, and other special methods, it is just a fancy way to reduce some
 boilerplate.
 
-PRODUCTDATA CLASS:
-ProductData is also a record class that is primarily used in the Inventory class
-when hardcoding the values of the products along with its associated image and its
-size dimensions.
+PRODUCTS CLASS:
+Products is also a record class which contains a name, price and icon field,
+with a constructor and getter functions. This class is usually
+used when displaying product name, price, and icon.
 
 BOUGHTITEM CLASS:
 The BoughtItem class only contains a Product type variable and a quantity, the difference
@@ -32,17 +41,22 @@ user to type in the quantity of the product chosen, after that, an instance of a
 from the BoughtItem class is then created.
 
 ORDER CLASS:
-The Order Class contains an ArrayList which stores the BoughtItem objects, there is also
-a unique id for it and a totalcost by adding up all the price in the arraylist.
+The Order Class contains an ArrayList which stores the BoughtItem objects, and other methods
+like calculating the total cost of the order and to reset the ArrayList
 
 INVENTORY CLASS:
-The Inventory Class contains the hardcoded objects from the Product class,
-The name and price are hardcoded here and then stored inside an array so that this array
-will be used to display the products. This also has a getter function
+The Inventory Class has an array that contains the hardcoded ProductData objects,
+The name, prices, imageicon and its dimensions are hardcoded here and then stored
+inside an array so that this array will be used to iterate through using a for loop
+when it is time to display.
 
 SALESINVENTORY CLASS:
-The SalesInventory Class contains an ArrayList which stores the Order objects, not much has been
-added in this class by the time this has been last written.
+The SalesInventory Class contains an ArrayList which stores the BoughtItem objects, there are
+few methods such as getting the ArrayList and appending to it. Everytime the user clicks the
+"Next Customer" button in the application, all the BoughtItems inside the Order list is appended
+to the SalesInventory ArrayList. When the user clicks the "Sales Inventory" button, this should
+get all the contents of the SalesInventory ArrayList and then display the names, quantities,
+subtotals, and the grand total (sum of all subtotals).
 
  ##### GUI #####
 For the GUI stuff, explaining the entire stuff is hard as hell, you might want to read the modules
