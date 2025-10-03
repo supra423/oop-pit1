@@ -18,6 +18,9 @@ public class ProductPanel extends JPanel {
         innerProductPanel.setBackground(Color.decode("#9EC3DD"));
         innerProductPanel.setPreferredSize(new Dimension(1285, 480));
         GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
 
         for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {
             JButton button = new JButton();
@@ -38,7 +41,7 @@ public class ProductPanel extends JPanel {
             innerProductPanel.add(button);
         }
 
-        this.add(innerProductPanel);
+        this.add(innerProductPanel, gbc);
     }
     public static JButton[] getButtons() { return buttons; }
 }

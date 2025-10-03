@@ -14,6 +14,9 @@ public class BottomPanel extends JPanel {
         ButtonPanel buttonPanel = new ButtonPanel();
         TextAreaPanel textAreaPanel = new TextAreaPanel();
 
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
         gbc.gridx = 0;
         this.add(textAreaPanel, gbc);
         gbc.gridx = 1;
