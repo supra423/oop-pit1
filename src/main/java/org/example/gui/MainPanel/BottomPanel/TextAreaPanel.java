@@ -1,6 +1,7 @@
 package org.example.gui.MainPanel.BottomPanel;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
