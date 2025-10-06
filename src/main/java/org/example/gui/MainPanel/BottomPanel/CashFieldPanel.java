@@ -19,6 +19,7 @@ public class CashFieldPanel extends JPanel {
         totalLabel.setFont(new Font("Arial", Font.BOLD, 30));
         totalPanel.setBackground(Color.decode("#E8F6FF"));
         totalPanel.setPreferredSize(new Dimension(480, 160));
+        totalPanel.setBorder(new BevelBorder(BevelBorder.RAISED));
         JPanel innerTotalPanel = new JPanel(new GridBagLayout());
         innerTotalPanel.setPreferredSize(new Dimension(460, 130));
         innerTotalPanel.setBackground(Color.WHITE);
@@ -53,6 +54,7 @@ public class CashFieldPanel extends JPanel {
         JPanel cashAndChangePanel = new JPanel(new GridBagLayout()); // group both change and cash panels
         cashAndChangePanel.setPreferredSize(new Dimension(480, 160));
         cashAndChangePanel.setBackground(Color.decode("#E8F6FF"));
+        cashAndChangePanel.setBorder(new BevelBorder(BevelBorder.RAISED));
         gbc.gridy = 0;
         gbc.weightx = 0;
         gbc.weighty = 1;

@@ -3,6 +3,7 @@ package org.example.gui.MainPanel.BottomPanel;
 import org.example.ButtonHandlers.*;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import java.awt.*;
 
 public class ButtonPanel extends JPanel {
@@ -26,6 +27,8 @@ public class ButtonPanel extends JPanel {
         cancelButton.addActionListener(cancelButtonHandler);
         confirmButton.setBackground(Color.decode("#0D9316"));
         cancelButton.setBackground(Color.decode("#DE3314"));
+        confirmButton.setBorder(new BevelBorder(BevelBorder.RAISED));
+        cancelButton.setBorder(new BevelBorder(BevelBorder.RAISED));
         confirmButton.setPreferredSize(new Dimension(220, 75));
         cancelButton.setPreferredSize(new Dimension(220, 75));
 
@@ -53,6 +56,8 @@ public class ButtonPanel extends JPanel {
         salesInventoryButton.addActionListener(salesInventoryButtonHandler);
         nextCustomerButton.setBackground(Color.decode("#7E5303"));
         salesInventoryButton.setBackground(Color.decode("#5A0B88"));
+        nextCustomerButton.setBorder(new BevelBorder(BevelBorder.RAISED));
+        salesInventoryButton.setBorder(new BevelBorder(BevelBorder.RAISED));
         nextCustomerButton.setLayout(new GridBagLayout());
         salesInventoryButton.setLayout(new GridBagLayout());
 

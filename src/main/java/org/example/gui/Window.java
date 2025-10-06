@@ -4,12 +4,15 @@ import org.example.gui.MainPanel.MainPanel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
 public class Window extends JFrame {
     public Window() {
         this.setTitle("Smart Phone Store");
         this.setLayout(new GridBagLayout());
 
+        ImageIcon logo = new ImageIcon(Objects.requireNonNull(Window.class.getResource("/assets/logoEdited.png")));
+        this.setIconImage(logo.getImage());
         this.getContentPane().setBackground(Color.WHITE);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
