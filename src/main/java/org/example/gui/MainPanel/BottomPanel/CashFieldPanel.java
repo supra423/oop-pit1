@@ -9,11 +9,9 @@ public class CashFieldPanel extends JPanel {
     private static final JLabel changeLabel = new JLabel("Change: Php00.00");
     private static final JTextField cashTextField = new JTextField(14);
     public CashFieldPanel() {
-        this.setLayout(new GridLayout());
+        this.setLayout(new GridBagLayout());
         this.setBackground(Color.decode("#9EC3DD"));
         this.setPreferredSize(new Dimension(500, 350));
-        JPanel panel1 = new JPanel(new GridBagLayout());
-        panel1.setBackground(Color.decode("#9EC3DD"));
 
         JPanel totalPanel = new JPanel(new GridBagLayout());
         totalLabel.setFont(new Font("Arial", Font.BOLD, 30));
@@ -25,7 +23,6 @@ public class CashFieldPanel extends JPanel {
         innerTotalPanel.setBackground(Color.WHITE);
         innerTotalPanel.setBorder(new LineBorder(Color.decode("#98CEE0")));
         innerTotalPanel.add(totalLabel);
-        totalPanel.add(innerTotalPanel);
 
         GridBagConstraints gbc = new GridBagConstraints();
 
@@ -55,19 +52,25 @@ public class CashFieldPanel extends JPanel {
         cashAndChangePanel.setPreferredSize(new Dimension(480, 160));
         cashAndChangePanel.setBackground(Color.decode("#E8F6FF"));
         cashAndChangePanel.setBorder(new BevelBorder(BevelBorder.RAISED));
+
+
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
+
         gbc.gridy = 0;
-        gbc.weightx = 0;
-        gbc.weighty = 1;
+        gbc.insets = new Insets(10, 10, 10, 10);
+        totalPanel.add(innerTotalPanel, gbc);
         cashAndChangePanel.add(cashPanel, gbc);
         gbc.gridy = 1;
         cashAndChangePanel.add(changePanel, gbc);
 
+        gbc.insets = new Insets(10, 10, 5, 10);
         gbc.gridy = 0;
-        gbc.gridx = 0;
-        panel1.add(totalPanel, gbc);
+        this.add(totalPanel, gbc);
         gbc.gridy = 1;
-        panel1.add(cashAndChangePanel, gbc);
-        this.add(panel1);
+        gbc.insets = new Insets(5, 10, 10, 10);
+        this.add(cashAndChangePanel, gbc);
     }
     public static JLabel getTotalLabel() { return totalLabel; }
     public static JLabel getChangeLabel() { return changeLabel; }

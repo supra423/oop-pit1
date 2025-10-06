@@ -4,6 +4,8 @@ import org.example.Inventory;
 import org.example.ButtonHandlers.ProductButtonHandler;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class ProductPanel extends JPanel {
@@ -23,6 +25,10 @@ public class ProductPanel extends JPanel {
         gbc.weighty = 1.0;
 
         for (int i = 0; i < NUMBER_OF_BUTTONS; i++) {
+            JPanel cellPanel = new JPanel(new GridBagLayout());
+            cellPanel.setBorder(new EmptyBorder(10, 5, 0, 5));
+            cellPanel.setBackground(Color.decode("#9EC3DD"));
+
             JButton button = new JButton();
             ProductButtonHandler productButtonHandler = new ProductButtonHandler(inventory.getInventory()[i]);
             button.setLayout(new GridBagLayout());
@@ -37,8 +43,10 @@ public class ProductPanel extends JPanel {
             gbc.gridy = 1;
             button.add(productInfo, gbc);
             button.setBackground(Color.WHITE);
+            button.setBorder(new BevelBorder(BevelBorder.RAISED));
             buttons[i] = button;
-            innerProductPanel.add(button);
+            cellPanel.add(button, gbc);
+            innerProductPanel.add(cellPanel);
         }
 
         this.add(innerProductPanel, gbc);
