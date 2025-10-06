@@ -13,8 +13,6 @@ public class ButtonPanel extends JPanel {
         this.setLayout(new GridBagLayout());
         this.setBackground(Color.decode("#9EC3DD"));
         this.setPreferredSize(new Dimension(300, 400));
-        JPanel panel1 = new JPanel(new GridBagLayout());
-        panel1.setBackground(Color.decode("#9EC3DD"));
 
         GridBagConstraints gbc = new GridBagConstraints();
         JButton confirmButton = new JButton();
@@ -41,12 +39,6 @@ public class ButtonPanel extends JPanel {
         confirmButton.add(confirmButtonLabel);
         cancelButton.add(cancelButtonLabel);
 
-        gbc.gridy = 0;
-        gbc.insets = new Insets(10, 10, 10, 10);
-        panel1.add(confirmButton, gbc);
-
-        gbc.gridy = 1;
-        panel1.add(cancelButton, gbc);
 
         JButton nextCustomerButton = new JButton();
         JButton salesInventoryButton = new JButton();
@@ -82,13 +74,20 @@ public class ButtonPanel extends JPanel {
         salesInventoryButton.add(salesInventoryLabel1, gbc);
         gbc.gridy = 1;
         salesInventoryButton.add(salesInventoryLabel2, gbc);
-        gbc.gridy = 2;
-        gbc.insets = new Insets(10, 10, 10, 10);
-        panel1.add(nextCustomerButton, gbc);
-        gbc.gridy = 3;
-        panel1.add(salesInventoryButton, gbc);
 
-        this.add(panel1);
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(10, 10, 10, 10);
+        this.add(confirmButton, gbc);
+        gbc.gridy = 1;
+        this.add(cancelButton, gbc);
+        gbc.gridy = 2;
+        this.add(nextCustomerButton, gbc);
+        gbc.gridy = 3;
+        this.add(salesInventoryButton, gbc);
+
     }
     public static void setCanClickNextCustomerButton(boolean val) { canClickNextCustomerButton = val; }
     public static boolean isCanClickNextCustomerButton() { return canClickNextCustomerButton; }
