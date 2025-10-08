@@ -21,7 +21,7 @@ public class CashFieldPanel extends JPanel {
         JPanel innerTotalPanel = new JPanel(new GridBagLayout());
         innerTotalPanel.setPreferredSize(new Dimension(460, 130));
         innerTotalPanel.setBackground(Color.WHITE);
-        innerTotalPanel.setBorder(new LineBorder(Color.decode("#98CEE0")));
+        innerTotalPanel.setBorder(new BevelBorder(BevelBorder.RAISED, Color.decode("#98CEE0"), Color.decode("#98CEE0") ));
         innerTotalPanel.add(totalLabel);
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -32,21 +32,25 @@ public class CashFieldPanel extends JPanel {
         cashLabel.setFont(new Font("Arial", Font.BOLD, 24));
         cashLabel.setBorder(new EmptyBorder(0, 10, 0, 10));
         cashTextField.setFont(new Font("Arial", Font.BOLD, 24));
+        cashTextField.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.decode("#98CEE0"), Color.decode("#98CEE0") ));
         cashPanel.setBackground(Color.WHITE);
         cashPanel.setPreferredSize(new Dimension(460, 60));
-        cashPanel.setBorder(new LineBorder(Color.decode("#98CEE0")));
+        cashPanel.setBorder(new BevelBorder(BevelBorder.RAISED, Color.decode("#98CEE0"), Color.decode("#98CEE0") ));
 
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.WEST;
         cashPanel.add(cashLabel, gbc);
         cashPanel.add(cashTextField, gbc);
 
-        JPanel changePanel = new JPanel();
+        JPanel changePanel = new JPanel(new GridBagLayout());
         changePanel.setBackground(Color.WHITE);
         changePanel.setPreferredSize(new Dimension(460, 60));
         changeLabel.setFont(new Font("Arial", Font.BOLD, 30));
-        changePanel.setBorder(new LineBorder(Color.decode("#98CEE0")));
+        changePanel.setBorder(new BevelBorder(BevelBorder.RAISED, Color.decode("#98CEE0"), Color.decode("#98CEE0") ));
         changePanel.add(changeLabel);
+
+        GridBagConstraints changegbc = new GridBagConstraints();
+        changePanel.add(changeLabel, changegbc);
 
         JPanel cashAndChangePanel = new JPanel(new GridBagLayout()); // group both change and cash panels
         cashAndChangePanel.setPreferredSize(new Dimension(480, 160));
