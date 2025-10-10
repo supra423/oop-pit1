@@ -56,12 +56,9 @@ public class ButtonPanel extends JPanel {
         JLabel nextCustomerLabel1 = new JLabel("NEXT CUSTOMER");
         nextCustomerLabel1.setForeground(Color.WHITE);
         nextCustomerLabel1.setFont(new Font("Arial", Font.BOLD, 20));
-        JLabel salesInventoryLabel1 = new JLabel("SALES");
-        JLabel salesInventoryLabel2 = new JLabel("INVENTORY");
-        salesInventoryLabel1.setForeground(Color.WHITE);
-        salesInventoryLabel2.setForeground(Color.WHITE);
-        salesInventoryLabel1.setFont(new Font("Arial", Font.BOLD, 20));
-        salesInventoryLabel2.setFont(new Font("Arial", Font.BOLD, 20));
+        JLabel salesInventoryLabel = new JLabel("SALES INVENTORY");
+        salesInventoryLabel.setForeground(Color.WHITE);
+        salesInventoryLabel.setFont(new Font("Arial", Font.BOLD, 20));
 
         nextCustomerButton.add(nextCustomerLabel1, gbc);
         gbc.gridy = 1;
@@ -69,9 +66,7 @@ public class ButtonPanel extends JPanel {
         salesInventoryButton.setPreferredSize(new Dimension(220, 75));
 
         gbc.insets = new Insets(0, 0, 0, 0);
-        salesInventoryButton.add(salesInventoryLabel1, gbc);
-        gbc.gridy = 1;
-        salesInventoryButton.add(salesInventoryLabel2, gbc);
+        salesInventoryButton.add(salesInventoryLabel, gbc);
 
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 1.0;
