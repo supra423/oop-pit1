@@ -17,11 +17,8 @@ public class BottomPanel extends JPanel {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
-        gbc.gridx = 0;
         this.add(textAreaPanel, gbc);
-        gbc.gridx = 1;
         this.add(cashFieldPanel, gbc);
-        gbc.gridx = 2;
         this.add(buttonPanel, gbc);
     }
 }
