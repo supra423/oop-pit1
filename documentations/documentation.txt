@@ -51,12 +51,18 @@ inside an array so that this array will be used to iterate through using a for l
 when it is time to display.
 
 SALESINVENTORY CLASS:
-The SalesInventory Class contains an ArrayList which stores the BoughtItem objects, there are
-few methods such as getting the ArrayList and appending to it. Everytime the user clicks the
-"Next Customer" button in the application, all the BoughtItems inside the Order list is appended
-to the SalesInventory ArrayList. When the user clicks the "Sales Inventory" button, this should
-get all the contents of the SalesInventory ArrayList and then display the names, quantities,
-subtotals, and the grand total (sum of all subtotals).
+(From commit "68179da595c4a0867e99177a5b495d1aae7ba56d" message)
+
+the SalesInventory class contains a new BoughtItem[]
+
+so everytime the user completes an order, we already know that the
+their order gets saved in the ArrayList in the Order class right?
+Then, using nested for loops, for every BoughtItem object in the Order
+ArrayList, it will get "matched" with a particular object in the array inside
+the SalesInventory class, if it matches, then the particular BoughtItem
+in the SalesInventory array has its quantity appended, depending
+on the quantity of the particular BoughtItem object in the Order
+ArrayList
 
  ##### GUI #####
 For the GUI stuff, explaining the entire stuff is hard as hell, you might want to read the modules
@@ -65,7 +71,7 @@ Ma'am gave us to at least know half the stuff I'm saying and understand what is 
 As you can see, in there is this "gui" directory, this is where all the gui components are stored,
 inside the gui directory also contain certain subdirectories that are also gui components,
 
-If you noticed it, I structured the gui directory in a form of a hierarchy
+If you noticed it, I structured the gui directory in a form of a hierarchy,
 the deeper you go inside the subdirectories of the gui directory, the deeper you are in
 the hierarchy. I structured the GUI components the same way!
 

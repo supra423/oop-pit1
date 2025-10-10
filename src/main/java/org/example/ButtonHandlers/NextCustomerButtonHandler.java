@@ -26,7 +26,6 @@ public class NextCustomerButtonHandler implements ActionListener {
             for (JButton button : ProductPanel.getButtons()) { button.setEnabled(true); }
             ButtonPanel.setCanClickNextCustomerButton(false);
             ButtonPanel.setCanClickConfirmButton(true);
-            SalesInventory.getBoughtItems();
         } else { JOptionPane.showMessageDialog(null, "Please complete current order!"); }
     }
 }

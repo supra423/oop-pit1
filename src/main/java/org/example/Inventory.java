@@ -15,7 +15,7 @@ public class Inventory {
         new ProductData("iPhoon XVI Pink", 599.99, "/assets/ip16-pink.png", 170, 170),
         new ProductData("iPhoon XVII Orange", 699.99, "/assets/ip17-orange.png", 150, 150),
         new ProductData("iPhoon XII Mini Blue", 799.99, "/assets/ip-12-mini-blue.png", 150, 150)
-    }; // this is used to store full information of the product to use in the for loop
+    }; // this is used to store full hardcoded information of the product to use in the for loop
     static {
         inventory = new Product[productData.length];
         for (int i = 0; i < productData.length; i++) {
