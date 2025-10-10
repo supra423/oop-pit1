@@ -9,6 +9,7 @@ public class BoughtItem {
     }
 
     public void setQuantity(int newQuantity) { this.quantity = newQuantity; }
+    public void addQuantity(int newQuantity) { this.quantity += newQuantity; }
     public int getQuantity() { return quantity; }
     public Product getProduct() { return product; }
 }
