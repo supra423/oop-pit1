@@ -4,23 +4,17 @@ import org.example.Inventory;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.EtchedBorder;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.util.Objects;
 
 public class LogoPanel extends JPanel {
     public LogoPanel() {
-        this.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
         this.setPreferredSize(new Dimension(1300, 100));
         this.setBackground(Color.decode("#2A354E"));
         this.setBorder(new BevelBorder(BevelBorder.LOWERED, Color.decode("#98CEE0"), Color.decode("#98CEE0") ));
         ImageIcon logo = new ImageIcon(Objects.requireNonNull(Inventory.class.getResource("/assets/logoEdited.png")));
 
         Image scaledLogo = logo.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
-
         ImageIcon newLogo = new ImageIcon(scaledLogo);
 
         JLabel labelLogo = new JLabel(newLogo);
@@ -30,10 +24,9 @@ public class LogoPanel extends JPanel {
         sloganLabel.setFont(new Font("Arial", Font.BOLD, 35));
         companyLabel.setForeground(Color.decode("#3BB4FF"));
         sloganLabel.setForeground(Color.WHITE);
-        gbc.insets = new Insets(10, 10, 10, 10);
 
-        this.add(labelLogo, gbc);
-        this.add(companyLabel, gbc);
-        this.add(sloganLabel, gbc);
+        this.add(labelLogo);
+        this.add(companyLabel);
+        this.add(sloganLabel);
     }
 }

@@ -37,10 +37,8 @@ public class CashFieldPanel extends JPanel {
         cashPanel.setPreferredSize(new Dimension(460, 60));
         cashPanel.setBorder(new BevelBorder(BevelBorder.RAISED, Color.decode("#98CEE0"), Color.decode("#98CEE0") ));
 
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.WEST;
-        cashPanel.add(cashLabel, gbc);
-        cashPanel.add(cashTextField, gbc);
+        cashPanel.add(cashLabel);
+        cashPanel.add(cashTextField);
 
         JPanel changePanel = new JPanel(new GridBagLayout());
         changePanel.setBackground(Color.WHITE);
@@ -48,10 +46,6 @@ public class CashFieldPanel extends JPanel {
         changeLabel.setFont(new Font("Arial", Font.BOLD, 30));
         changePanel.setBorder(new BevelBorder(BevelBorder.RAISED, Color.decode("#98CEE0"), Color.decode("#98CEE0") ));
         changePanel.add(changeLabel);
-
-        GridBagConstraints changegbc = new GridBagConstraints();
-        changePanel.add(changeLabel, changegbc);
-
         JPanel cashAndChangePanel = new JPanel(new GridBagLayout()); // group both change and cash panels
         cashAndChangePanel.setPreferredSize(new Dimension(480, 160));
         cashAndChangePanel.setBackground(Color.decode("#E8F6FF"));
@@ -62,7 +56,6 @@ public class CashFieldPanel extends JPanel {
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
 
-        gbc.gridy = 0;
         gbc.insets = new Insets(10, 10, 10, 10);
         totalPanel.add(innerTotalPanel, gbc);
         cashAndChangePanel.add(cashPanel, gbc);

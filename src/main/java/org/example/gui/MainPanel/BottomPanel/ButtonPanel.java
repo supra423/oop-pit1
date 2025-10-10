@@ -63,13 +63,11 @@ public class ButtonPanel extends JPanel {
         salesInventoryLabel1.setFont(new Font("Arial", Font.BOLD, 20));
         salesInventoryLabel2.setFont(new Font("Arial", Font.BOLD, 20));
 
-        gbc.gridy = 0;
         nextCustomerButton.add(nextCustomerLabel1, gbc);
         gbc.gridy = 1;
         nextCustomerButton.setPreferredSize(new Dimension(220, 75));
         salesInventoryButton.setPreferredSize(new Dimension(220, 75));
 
-        gbc.gridy = 0;
         gbc.insets = new Insets(0, 0, 0, 0);
         salesInventoryButton.add(salesInventoryLabel1, gbc);
         gbc.gridy = 1;
