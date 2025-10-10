@@ -39,7 +39,6 @@ public class ButtonPanel extends JPanel {
         confirmButton.add(confirmButtonLabel);
         cancelButton.add(cancelButtonLabel);
 
-
         JButton nextCustomerButton = new JButton();
         JButton salesInventoryButton = new JButton();
         NextCustomerButtonHandler nextCustomerButtonHandler = new NextCustomerButtonHandler();
