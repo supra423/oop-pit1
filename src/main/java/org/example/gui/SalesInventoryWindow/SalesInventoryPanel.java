@@ -1,5 +1,7 @@
 package org.example.gui.SalesInventoryWindow;
 
+import org.example.gui.MainPanel.LogoPanel.LogoPanel;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,11 +12,12 @@ public class SalesInventoryPanel extends JPanel {
         this.setBackground(Color.decode("#9EC3DD"));
         GridBagConstraints gbc = new GridBagConstraints();
 
-        JLabel salesInventoryLabel = new JLabel("JNJS SALES INVENTORY");
-        salesInventoryLabel.setFont(new Font("Arial", Font.BOLD, 25));
+        LogoPanel logoPanel = new LogoPanel();
+        logoPanel.setPreferredSize(new Dimension(800, 100));
+        logoPanel.setSloganText("| Sales Inventory");
 
         JPanel innerSalesInventoryPanel = new JPanel(new GridBagLayout());
-        innerSalesInventoryPanel.setPreferredSize(new Dimension(750, 750));
+        innerSalesInventoryPanel.setPreferredSize(new Dimension(750, 800));
 
         SalesInventoryTextArea salesInventoryTextArea = new SalesInventoryTextArea();
 
@@ -26,9 +29,9 @@ public class SalesInventoryPanel extends JPanel {
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         innerSalesInventoryPanel.add(scrollPane, gbc);
-        gbc.weightx = 0.0;
-        gbc.weighty = 0.0;
-        this.add(salesInventoryLabel, gbc);
+//        gbc.weightx = 0.0;
+//        gbc.weighty = 0.0;
+        this.add(logoPanel, gbc);
         gbc.gridy = 1;
         this.add(innerSalesInventoryPanel, gbc);
     }
