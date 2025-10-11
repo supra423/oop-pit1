@@ -8,7 +8,7 @@ import java.awt.*;
 import java.util.Objects;
 
 public class LogoPanel extends JPanel {
-    private String sloganText = "| Experience the Boldness.";
+    private final JLabel sloganLabel = new JLabel("| Experience the Boldness.");
     public LogoPanel() {
         this.setPreferredSize(new Dimension(1300, 100));
         this.setBackground(Color.decode("#2A354E"));
@@ -20,7 +20,6 @@ public class LogoPanel extends JPanel {
 
         JLabel labelLogo = new JLabel(newLogo);
         JLabel companyLabel = new JLabel("JNJS");
-        JLabel sloganLabel = new JLabel(sloganText);
         companyLabel.setFont(new Font("Arial", Font.BOLD, 40));
         sloganLabel.setFont(new Font("Arial", Font.BOLD, 35));
         companyLabel.setForeground(Color.decode("#3BB4FF"));
@@ -30,7 +29,7 @@ public class LogoPanel extends JPanel {
         this.add(companyLabel);
         this.add(sloganLabel);
     }
-    public void setSloganText(String newText) {
-        sloganText = newText;
+    public JLabel getSloganLabel() {
+        return sloganLabel;
     }
 }

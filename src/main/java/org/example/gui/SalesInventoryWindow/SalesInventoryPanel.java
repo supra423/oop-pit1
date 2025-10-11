@@ -14,7 +14,7 @@ public class SalesInventoryPanel extends JPanel {
 
         LogoPanel logoPanel = new LogoPanel();
         logoPanel.setPreferredSize(new Dimension(800, 100));
-        logoPanel.setSloganText("| Sales Inventory");
+        logoPanel.getSloganLabel().setText("| Sales Inventory");
 
         JPanel innerSalesInventoryPanel = new JPanel(new GridBagLayout());
         innerSalesInventoryPanel.setPreferredSize(new Dimension(750, 800));
@@ -29,8 +29,6 @@ public class SalesInventoryPanel extends JPanel {
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         innerSalesInventoryPanel.add(scrollPane, gbc);
-//        gbc.weightx = 0.0;
-//        gbc.weighty = 0.0;
         this.add(logoPanel, gbc);
         gbc.gridy = 1;
         this.add(innerSalesInventoryPanel, gbc);
